@@ -1,5 +1,6 @@
 package com.group4;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,8 +23,7 @@ public class Maze {
 	private void createPlayer() {	
 		player = new Character("Player", false, 100);
 	}
-	
-	
+
 	private void createRooms()  {
 		Room a, b, c, d, e, f, g, h, i, j;
 
@@ -38,7 +38,7 @@ public class Maze {
 		i = new Room("i");
 		j = new Room("j");
 
-	//             (N, E, S, W)
+		//             (N, E, S, W)
 		a.setExits(f, b, d, c);
 		b.setExits(null, null, null, a);
 		c.setExits(null, a, null, null);
@@ -87,25 +87,103 @@ public class Maze {
 		dog = new Character("Dog", true, 30);
 		dog.setDamage(20);
 		enemies = Arrays.asList(ninja, terrorist, troop, dog);
-		List<Integer> roomsWithEnemies;
+		List<Integer> roomsWithEnemies = new ArrayList<>();
 		int roomIndex;
 		boolean duplicates;
-		for(int i = 0; i < (rand() % 3) + 2; i++) { // (random number between 0 and 2) + 2... so range is 2-4
+		for(int i = 0; i < (int)(Math.random() % 3) + 2; i++) { // (random number between 0 and 2) + 2... so range is 2-4
 			duplicates = true;
 			while(duplicates) {
 				duplicates = false;
-				roomIndex = rand() % rooms.size();
+				roomIndex = (int)(Math.random() % rooms.size());
 				for(int y = 0; y < roomsWithEnemies.size(); y++) {
-					if(roomIndex == roomsWithEnemies[y])
+					if(roomIndex == roomsWithEnemies.get(y))
 						duplicates = true;
 				}
 				if(!duplicates) {
-					roomsWithEnemies.push_back(roomIndex);
-					rooms[roomIndex]->addEnemy(enemies[rand() % enemies.size()]);
+					roomsWithEnemies.add(roomIndex);
+					rooms.get(roomIndex).addEnemy(enemies.get((int)(Math.random() * enemies.size())));
 					enemyNumber++;
 				}
 			}
 		}
 	}
 	
+	
+
+
+	public String go(String direction) {
+		//Make the direction lowercase
+		//transform(direction.begin(), direction.end(), direction.begin(),:: tolower);
+		//Move to the next room
+		String message = "";
+		Room nextRoom = currentRoom.nextRoom(direction);
+		if (nextRoom != null)
+			currentRoom = nextRoom;
+		else
+			message += "You tried to go past the map...\n";
+		message += currentRoom.longDescription();
+		return message;
+	}
+
+	public String teleport() {
+		currentRoom = currentRoom.randomRoom(rooms);
+		return currentRoom.longDescription();
+	}
+
+	public void take(String itemName) {
+		Item item = currentRoom.isItemInRoom(itemName);
+		if(item.getIsAmmo()) {
+			if(!player.getInventory().getHasAmmo())
+			player.getInventory().setAmmo((Ammo)item);
+            else
+			player.getInventory().addAmmo((Ammo)item);
+		}
+		else {
+			player.getInventory().addItem(item);
+			if(player.getInventory().getItems().size() == 1)
+			player.getInventory().setCurrentItem(0);
+		}
+	}
+
+	public String showMap() {
+
+		String map = "";
+		map += "[h] --- [f] --- [g]\n";
+		map += "            |         \n";
+		map += "            |         \n";
+		map += "[c] --- [a] --- [b]\n";
+		map += "            |         \n";
+		map += "            |         \n";
+		map += "[i] --- [d] --- [e] --- [j]\n";
+		int mapLength = map.length();
+
+		for(int i = 0; i < mapLength; i++) {
+			if(map.charAt(i) == currentRoom.shortDescription().charAt(0))
+				map = map.replace(map.charAt(i), 'X');
+		}
+		return map;
+	}
+
+	public Character getPlayer() {
+		return player;
+	}
+
+	public void attack() {
+		String message = "";
+		if(player.getInventory().getCurrentItem().getIsGun() && !player.getInventory().ammo.getIsEmpty()) {
+			currentRoom.enemies.get(0).lowerHealth(player.getInventory().getCurrentItem().getDamage());
+			player.getInventory().ammo.useAmmo();
+		}
+    else {
+			currentRoom.enemies.get(0).lowerHealth(player.getInventory().getCurrentItem().getDamage());
+		}
+	}
+
+	void enemyKilled() {
+		enemyNumber--;
+	}
+
+	int getEnemyNumber() {
+		return enemyNumber;
+	}
 }

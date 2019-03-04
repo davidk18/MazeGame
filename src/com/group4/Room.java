@@ -1,21 +1,24 @@
 package com.group4;
 
-import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Room {
-	
+
 	private String description;
 	private Map<String, Room> exits;
     private List<Item> itemsInRoom;
     private boolean enemyPresent;
-    private List<Character> enemies;
-	
+    public List<Character> enemies;
+
 	public Room(String description) {
 		this.description = description;
 		enemyPresent = false;
+		exits = new LinkedHashMap<>();
+		itemsInRoom = new ArrayList<>();
+		enemies = new ArrayList<>();
 	}
 
 
@@ -44,7 +47,7 @@ public class Room {
 
 	public String exitString() {
 		String returnString = "\nexits =";
-		for (Map.Entry<String, Room> entry : exits.entrySet()) {
+		for (Map.Entry entry : exits.entrySet()) {
 			returnString += "  " + entry.getKey();	// access the "first" element of the pair (direction as a string)
 		}
 		return returnString;
@@ -61,7 +64,7 @@ public class Room {
 	public Room randomRoom(List<Room> rooms) {
 		boolean success = false;
 		while(!success) {
-			int i = (int)(Math.random() % rooms.size());
+			int i = (int)(Math.random() * rooms.size());
 			if(this.description != rooms.get(i).shortDescription()) {
 			   return rooms.get(i);
 			}
@@ -138,5 +141,5 @@ public class Room {
 		enemyPresent = false;
 	//    delete enemy;
 	}
-		
+
 }
