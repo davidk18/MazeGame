@@ -3,6 +3,8 @@ package com.group4;
 import com.group4.Factory.GoldWeaponFactory;
 import com.group4.Factory.WeaponFactory;
 import com.group4.Interfaces.Shotgun;
+import com.group4.Objects.Builder;
+import com.group4.Objects.CharacterProduct;
 import com.group4.Objects.Maze;
 import com.group4.Objects.MazeGame;
 
@@ -15,5 +17,7 @@ public class Main {
         WeaponFactory factory = new GoldWeaponFactory();
         Shotgun gun = factory.getShotgun();
         System.out.println(gun.getLongDescription());
+
+        CharacterProduct mainCharacter = new CharacterProduct.Builder().setDescription("tyrese").build();
     }
 }
