@@ -45,7 +45,7 @@ public class CharacterProduct {
             return this;
         }
 
-  /*  public Builder setInventory(Inventory inventory) {
+    /*  public Builder setInventory(Inventory inventory) {
         this.inventory = inventory;
         return this;
     }*/

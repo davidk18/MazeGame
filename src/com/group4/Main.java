@@ -19,5 +19,6 @@ public class Main {
 
         CharacterProduct mainCharacter = new CharacterProduct.Builder().setDescription("tyrese").setAlive(true).build();
         CharacterProduct enemy = new CharacterProduct.Builder().setEnemy(true).setHealth(100).setDamage(50).build();
+
     }
 }
