@@ -18,6 +18,25 @@ public class CharacterProduct {
         this.damage = builder.damage;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public boolean isEnemy() {
+        return isEnemy;
+    }
+
+    public boolean isAlive() {
+        return isAlive;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
 
     public static class Builder {
 
