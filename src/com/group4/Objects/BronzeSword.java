@@ -1,10 +1,16 @@
 package com.group4.Objects;
 
+import com.group4.Interfaces.Enchantment;
 import com.group4.Interfaces.Sword;
 
 public class BronzeSword implements Sword {
 
     private int damage;
+    private Enchantment enchantment;
+
+    public BronzeSword(Enchantment enchantment) {
+        this.enchantment = enchantment;
+    }
 
     public BronzeSword() {
         damage = 20;
@@ -13,6 +19,12 @@ public class BronzeSword implements Sword {
     @Override
     public int getDamage() {
         return damage;
+    }
+
+    public int enchantedDamage(){
+        enchantment.apply();
+        System.out.println("enchantment applied");
+        return damage * 2;
     }
 
     @Override
@@ -33,5 +45,10 @@ public class BronzeSword implements Sword {
     @Override
     public boolean getIsAmmo() {
         return false;
+    }
+
+    @Override
+    public Enchantment getEnchantment(){
+        return enchantment;
     }
 }

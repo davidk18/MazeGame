@@ -2,11 +2,9 @@ package com.group4;
 
 import com.group4.Factory.GoldWeaponFactory;
 import com.group4.Factory.WeaponFactory;
+import com.group4.Objects.*;
 import com.group4.Interfaces.Shotgun;
 import com.group4.Interfaces.Sword;
-import com.group4.Objects.CharacterProduct;
-import com.group4.Objects.Maze;
-import com.group4.Objects.MazeGame;
 
 public class Main {
 
@@ -29,7 +27,13 @@ public class Main {
         System.out.println("enemy isAlive? " + enemy.isAlive());
         System.out.println("enemy isEnemy? " + enemy.isEnemy());
 
-        System.out.println(mainCharacter.getDescription());
+        System.out.println("main characters name: " + mainCharacter.getDescription());
+
+        BronzeSword enchantedSword = new BronzeSword(new DoubleDamage());
+        enchantedSword.enchantedDamage();
+
+        BronzeSword godSword = new BronzeSword(new GodMode());
+        godSword.enchantedDamage();
 
     }
 }
