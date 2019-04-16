@@ -24,7 +24,7 @@ public class Dispatcher implements Interceptor{
 	public void postRequest(CharacterProduct mainCharacter) {
 		Interceptor myInterceptor = Interceptors.get(Interceptors.size()-1);
 		System.out.println(mainCharacter.getDescription()+" Finished attacking");
-		//mainCharacter.setHealth(50);
+		//mainCharacter.setHealth(50); i cannot set this as i cannot access the products health 
 		myInterceptor.postRequest(mainCharacter);
 	}
 
