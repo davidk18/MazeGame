@@ -38,6 +38,8 @@ public class CharacterProduct {
         return damage;
     }
 
+    //public void setHealth(int newHealth) { this.health = newHealth; }
+
     public static class Builder {
 
         private String description;

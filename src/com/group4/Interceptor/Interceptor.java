@@ -1,9 +1,11 @@
 package com.group4.Interceptor;
 
+import com.group4.Objects.CharacterProduct;
+
 public interface Interceptor {
 
-	void preRequest(Context context);
-	void postRequest(Context context);
+	void preRequest(CharacterProduct mainCharacter);
+	void postRequest(CharacterProduct mainCharacter);
 	
 	
 }

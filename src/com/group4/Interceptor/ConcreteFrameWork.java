@@ -1,20 +1,19 @@
 package com.group4.Interceptor;
 
+import com.group4.Objects.CharacterProduct;
+
 public class ConcreteFrameWork {
 
-	public void Start() {
-		// TODO Auto-generated method stub
+	public static void attack(CharacterProduct mainCharacter) { // should be the attack has to be in the main file as this ill start th interceptor
 		
 		Dispatcher myDispatcher = Dispatcher.getInstanceOfDispatcher();  // create dispatcher singleton
-		
-		Application userLog = new Application();
-		
-		
-		userLog.LogIn(new Context(System.nanoTime(),"user 1" ), myDispatcher);
-		userLog.LogIn(new Context(System.nanoTime(),"user 2" ), myDispatcher);
 
-		userLog.LogOut(new Context(System.nanoTime(),"user 1" ), myDispatcher);
-		userLog.LogOut(new Context(System.nanoTime(),"user 2" ), myDispatcher);
+		AttackSequence userAttack = new AttackSequence(); //this will be the attack sequence
+
+
+		userAttack.checkHealthBefore(mainCharacter, myDispatcher); //context needs to be the main character
+
+		userAttack.checkHealthAfter(mainCharacter, myDispatcher);
 		
 	}
 

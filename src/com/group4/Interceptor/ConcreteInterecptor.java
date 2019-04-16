@@ -1,12 +1,13 @@
 package com.group4.Interceptor;
 
 import java.util.ArrayList;
+import com.group4.Objects.CharacterProduct;
 
 public class ConcreteInterecptor implements Interceptor{
 
 	
-	ArrayList<String> DetailsOfLogin = new ArrayList<String>();
-	ArrayList<String> DetailsOfLogout = new ArrayList<String>();
+	ArrayList<String> HealthBefore = new ArrayList<String>();
+	ArrayList<String> HealthAfter = new ArrayList<String>();
 	
 	private static ConcreteInterecptor myInterceptorAction;
 	
@@ -14,14 +15,14 @@ public class ConcreteInterecptor implements Interceptor{
 		
 	}
 	
-	public void preRequest(Context context) {
-		System.out.println("The time when\t"+context.getUserName()+"\tuser is connected\t"+context.getTime());
-		DetailsOfLogin.add(context.getUserName()+"\t"+context.getTime());
+	public void preRequest(CharacterProduct mainCharacter) {
+		System.out.println(mainCharacter.getDescription()+"'s health before he attacked is: "+mainCharacter.getHealth());
+		HealthBefore.add(mainCharacter.getDescription()+"\t"+mainCharacter.getHealth());
 	}
 
-	public void postRequest(Context context) {
-		System.out.println("The time when\t"+context.getUserName()+"\tuser is disconnected\t"+context.getTime());
-		DetailsOfLogout.add(context.getUserName()+"\t"+context.getTime());
+	public void postRequest(CharacterProduct mainCharacter) {
+		System.out.println(mainCharacter.getDescription()+"'s health after attacking is: "+mainCharacter.getHealth());
+		HealthAfter.add(mainCharacter.getDescription()+"\t"+mainCharacter.getHealth());
 	}
 	
 

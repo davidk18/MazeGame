@@ -1,6 +1,7 @@
 package com.group4.Interceptor;
 
 import java.util.ArrayList;
+import com.group4.Objects.CharacterProduct;
 
 public class Dispatcher implements Interceptor{
 
@@ -12,28 +13,29 @@ public class Dispatcher implements Interceptor{
 		
 	}
 	
-	public void preRequest(Context context) {
+	public void preRequest(CharacterProduct mainCharacter) {
 		Interceptor myInterceptor = Interceptors.get(Interceptors.size()-1);
-		System.out.println(context.getUserName()+"\t"+context.getTime()+"\tLogin ");
-		myInterceptor.preRequest(context);
+		System.out.println(mainCharacter.getDescription()+" Attacked");
+		myInterceptor.preRequest(mainCharacter);
 		
 		
 	}
 
-	public void postRequest(Context context) {
+	public void postRequest(CharacterProduct mainCharacter) {
 		Interceptor myInterceptor = Interceptors.get(Interceptors.size()-1);
-		System.out.println(context.getUserName()+"\t"+context.getTime()+"\tLogout ");
-		myInterceptor.postRequest(context);		
+		System.out.println(mainCharacter.getDescription()+" Finished attacking");
+		//mainCharacter.setHealth(50);
+		myInterceptor.postRequest(mainCharacter);
 	}
 
 	public void registerDispatcher(Interceptor interceptor) {
 		Interceptors.add(interceptor);
-		System.out.println("An interceptor is registered! ");
+		//System.out.println("You have attacked.");
 	}
 	
 	public void removerDispatcher(Interceptor interceptor) {
 		Interceptors.remove(interceptor);
-		System.out.println("The interceptor is removed! ");
+		//System.out.println("Your attack is over.");
 	}
 	
 	

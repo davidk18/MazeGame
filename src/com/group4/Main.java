@@ -5,6 +5,7 @@ import com.group4.Factory.WeaponFactory;
 import com.group4.Objects.*;
 import com.group4.Interfaces.Shotgun;
 import com.group4.Interfaces.Sword;
+import com.group4.Interceptor.ConcreteFrameWork;
 
 public class Main {
 
@@ -34,6 +35,8 @@ public class Main {
 
         BronzeSword godSword = new BronzeSword(new GodMode());
         godSword.enchantedDamage();
+        //System.out.println(mainCharacter.setHealth(50));
+        ConcreteFrameWork.attack(mainCharacter);
 
     }
 }
