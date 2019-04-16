@@ -20,7 +20,7 @@ public class Main {
         Sword sword = factory.getSword();
         System.out.println(sword.getDamage());
 
-        CharacterProduct mainCharacter = new CharacterProduct.Builder().setDescription("tyrese").setAlive(true).build();
+        CharacterProduct mainCharacter = new CharacterProduct.Builder().setDescription("tyrese").setHealth(100).setAlive(true).build();
         CharacterProduct enemy = new CharacterProduct.Builder().setEnemy(true).setAlive(true).setHealth(100).setDamage(50).build();
 
         System.out.println("enemy health " + enemy.getHealth());
