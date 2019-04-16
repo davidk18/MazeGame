@@ -6,7 +6,7 @@ public class CharacterProduct {
     // private final Inventory inventory;
     private final boolean isEnemy;
     private final boolean isAlive;
-    private final int health;
+    private int health; //builder usually has all variables immutable, but for how we use character we need to be able to update health.
     private final int damage;
 
     public CharacterProduct(Builder builder) {
@@ -38,7 +38,8 @@ public class CharacterProduct {
         return damage;
     }
 
-    //public void setHealth(int newHealth) { this.health = newHealth; }
+    public void setHealth(int newHealth) { this.health = newHealth;}
+    //builder usually has no set methods but we need to be able to update the characters health after attacks.
 
     public static class Builder {
 

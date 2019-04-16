@@ -38,5 +38,7 @@ public class Main {
         //System.out.println(mainCharacter.setHealth(50));
         ConcreteFrameWork.attack(mainCharacter);
 
+        System.out.println(mainCharacter);
+
     }
 }
