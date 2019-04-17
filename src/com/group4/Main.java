@@ -36,7 +36,7 @@ public class Main {
         BronzeSword godSword = new BronzeSword(new GodMode());
         godSword.enchantedDamage();
         //System.out.println(mainCharacter.setHealth(50));
-        ConcreteFrameWork.attack(mainCharacter);
+
 
         System.out.println(mainCharacter);
 
@@ -50,6 +50,6 @@ public class Main {
         cloned.setDamage(30);
         cloned.setEnemy(true);
         System.out.println("clone name: " + cloned.getDescription() + "clone damage " + cloned.getDamage() +  cloned.getHealth());
-
+        ConcreteFrameWork.attack(original);
     }
 }

@@ -1,11 +1,11 @@
 package com.group4.Interceptor;
 
-import com.group4.Objects.CharacterProduct;
+import com.group4.Objects.CharacterPrototype;
 
 public interface Interceptor {
 
-	void preRequest(CharacterProduct mainCharacter);
-	void postRequest(CharacterProduct mainCharacter);
+	void preRequest(CharacterPrototype mainCharacter);
+	void postRequest(CharacterPrototype mainCharacter);
 	
 	
 }

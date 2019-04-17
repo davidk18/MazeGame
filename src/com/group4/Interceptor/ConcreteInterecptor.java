@@ -1,7 +1,7 @@
 package com.group4.Interceptor;
 
 import java.util.ArrayList;
-import com.group4.Objects.CharacterProduct;
+import com.group4.Objects.CharacterPrototype;
 
 public class ConcreteInterecptor implements Interceptor{
 
@@ -15,12 +15,12 @@ public class ConcreteInterecptor implements Interceptor{
 		
 	}
 	
-	public void preRequest(CharacterProduct mainCharacter) {
+	public void preRequest(CharacterPrototype mainCharacter) {
 		System.out.println(mainCharacter.getDescription()+"'s health before he attacked is: "+mainCharacter.getHealth());
 		HealthBefore.add(mainCharacter.getDescription()+"\t"+mainCharacter.getHealth());
 	}
 
-	public void postRequest(CharacterProduct mainCharacter) {
+	public void postRequest(CharacterPrototype mainCharacter) {
 		System.out.println(mainCharacter.getDescription()+"'s health after attacking is: "+mainCharacter.getHealth());
 		HealthAfter.add(mainCharacter.getDescription()+"\t"+mainCharacter.getHealth());
 	}
