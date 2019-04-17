@@ -1,8 +1,10 @@
 package com.group4.Objects;
 
+import com.group4.Interfaces.Enchantment;
 import com.group4.Interfaces.Shotgun;
+import com.group4.Interfaces.Weapon;
 
-public class GoldShotgun implements Shotgun {
+public class GoldShotgun implements Weapon {
 
     private boolean isGun;
     private int damage;
@@ -38,6 +40,11 @@ public class GoldShotgun implements Shotgun {
     @Override
     public void addAmmo(int a) {
         ammo.addAmmo(a);
+    }
+
+    @Override
+    public Enchantment getEnchantment() {
+        return null;
     }
 
     @Override

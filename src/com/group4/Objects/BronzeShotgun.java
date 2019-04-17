@@ -1,8 +1,11 @@
 package com.group4.Objects;
 
+import com.group4.Interfaces.Enchantment;
 import com.group4.Interfaces.Shotgun;
+import com.group4.Interfaces.Weapon;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-public class BronzeShotgun implements Shotgun {
+public class BronzeShotgun implements Weapon {
 
     private boolean isGun;
     private int damage;
@@ -12,6 +15,7 @@ public class BronzeShotgun implements Shotgun {
     {
         isGun = true;
         damage = 40;
+        ammo = new Ammo();
     }
     @Override
     public int getDamage() {
@@ -37,6 +41,11 @@ public class BronzeShotgun implements Shotgun {
     @Override
     public void addAmmo(int a) {
         ammo.addAmmo(a);
+    }
+
+    @Override
+    public Enchantment getEnchantment() {
+        throw new NotImplementedException();
     }
 
     @Override

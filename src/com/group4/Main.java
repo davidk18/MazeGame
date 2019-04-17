@@ -1,7 +1,10 @@
 package com.group4;
 
 import com.group4.Factory.GoldWeaponFactory;
+import com.group4.Factory.SimpleWeaponFactory;
 import com.group4.Factory.WeaponFactory;
+import com.group4.Interfaces.Item;
+import com.group4.Interfaces.Weapon;
 import com.group4.Objects.*;
 import com.group4.Interfaces.Shotgun;
 import com.group4.Interfaces.Sword;
@@ -13,12 +16,12 @@ public class Main {
         MazeGame game = new MazeGame();
         Maze maze = game.createMaze();
 
-        WeaponFactory factory = new GoldWeaponFactory();
-        Shotgun gun = factory.getShotgun();
+        SimpleWeaponFactory simpleFactory = new SimpleWeaponFactory();
+        WeaponFactory factory = simpleFactory.getWeaponFactory("Gold");
+        Weapon gun = factory.getWeapon("Sword");
         System.out.println(gun.getLongDescription());
+        System.out.println(gun.getDamage());
 
-        Sword sword = factory.getSword();
-        System.out.println(sword.getDamage());
 
         CharacterProduct mainCharacter = new CharacterProduct.Builder().setDescription("tyrese").setHealth(100).setAlive(true).build();
         CharacterProduct enemy = new CharacterProduct.Builder().setEnemy(true).setAlive(true).setHealth(100).setDamage(50).build();
