@@ -9,7 +9,7 @@ import com.group4.Interceptor.ConcreteFrameWork;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         MazeGame game = new MazeGame();
         Maze maze = game.createMaze();
 
@@ -39,6 +39,17 @@ public class Main {
         ConcreteFrameWork.attack(mainCharacter);
 
         System.out.println(mainCharacter);
+
+        CharacterPrototype original = new CharacterPrototype("johnathon", false, true, 100, 10);
+        System.out.println(original.getDescription());
+
+        //Clone and Modify what is required
+        CharacterPrototype cloned = original.clone();
+        cloned.setDescription("billy ray cyrus");
+        cloned.setAlive(true);
+        cloned.setDamage(30);
+        cloned.setEnemy(true);
+        System.out.println("clone name: " + cloned.getDescription() + "clone damage " + cloned.getDamage() +  cloned.getHealth());
 
     }
 }
