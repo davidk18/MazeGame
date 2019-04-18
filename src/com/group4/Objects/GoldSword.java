@@ -1,7 +1,6 @@
 package com.group4.Objects;
 
 import com.group4.Interfaces.Enchantment;
-import com.group4.Interfaces.Sword;
 import com.group4.Interfaces.Weapon;
 
 public class GoldSword implements Weapon {
@@ -22,20 +21,6 @@ public class GoldSword implements Weapon {
         return damage;
     }
 
-    @Override
-    public Ammo getAmmo() {
-        return null;
-    }
-
-    @Override
-    public boolean fire() {
-        return false;
-    }
-
-    @Override
-    public void addAmmo(int a) {
-
-    }
 
     public int enchantedDamage(){
         enchantment.apply();

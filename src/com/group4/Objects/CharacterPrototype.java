@@ -8,6 +8,7 @@ public class CharacterPrototype implements Cloneable {
     private boolean isAlive;
     private int health;
     private int damage;
+    private Room currentRoom;
 
     public CharacterPrototype(CharacterPrototype characterPrototype)
     {
@@ -73,8 +74,18 @@ public class CharacterPrototype implements Cloneable {
         this.damage = damage;
     }
 
+    public Room getCurrentRoom() {
+        return currentRoom;
+    }
+
+    public void setCurrentRoom(Room currentRoom) {
+        this.currentRoom = currentRoom;
+    }
+
     @Override
     public CharacterPrototype clone() throws CloneNotSupportedException{
         return new CharacterPrototype(this);
     }
+
+
 }

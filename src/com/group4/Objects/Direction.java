@@ -1,6 +1,6 @@
 package com.group4.Objects;
 
-final class Direction {
+public final class Direction {
     private Direction(String n){ _name = n; }
     public final static Direction North =
             new Direction("North");

@@ -25,7 +25,7 @@ public class Room extends MapSite {
                 site.toString());
     }
 
-    MapSite getSide(Direction d){
+    public MapSite getSide(Direction d){
         MapSite result = null;
         if (d == Direction.North){
             result = _northSide;

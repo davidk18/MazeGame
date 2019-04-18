@@ -15,4 +15,12 @@ public class Door extends MapSite {
     private int _doorNr;
     private Room _room1;
     private Room _room2;
+
+    public Room getRoom1() {
+        return _room1;
+    }
+
+    public Room getRoom2() {
+        return _room2;
+    }
 }
