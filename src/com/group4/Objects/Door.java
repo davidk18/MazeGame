@@ -4,7 +4,7 @@ package com.group4.Objects;
 public class Door extends MapSite {
     public Door(Room r1, Room r2){
         _doorNr = _doorCnt++;
-        System.out.println("creating a Door #" + _doorNr + " between " + r1 + " and " + r2);
+//        System.out.println("creating a Door #" + _doorNr + " between " + r1 + " and " + r2);
         _room1 = r1;
         _room2 = r2;
     }

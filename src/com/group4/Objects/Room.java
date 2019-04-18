@@ -20,9 +20,7 @@ public class Room extends MapSite {
         } else if (d == Direction.West){
             _westSide = site;
         }
-        System.out.println("setting " + d.toString() +
-                " side of " + this.toString() + " to " +
-                site.toString());
+        //System.out.println("setting " + d.toString() + " side of " + this.toString() + " to " + site.toString());
     }
 
     public MapSite getSide(Direction d){

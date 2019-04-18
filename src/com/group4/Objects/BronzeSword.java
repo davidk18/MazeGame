@@ -10,6 +10,7 @@ public class BronzeSword implements Weapon {
 
     public BronzeSword(Enchantment enchantment) {
         this.enchantment = enchantment;
+        damage = 20;
     }
 
     public BronzeSword() {
@@ -22,10 +23,10 @@ public class BronzeSword implements Weapon {
     }
 
 
-    public int enchantedDamage(){
+    public void enchantedDamage(){
         enchantment.apply();
         System.out.println("enchantment applied");
-        return damage * 2;
+        damage *= 2;
     }
 
     @Override

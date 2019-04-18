@@ -94,6 +94,7 @@ public class Main {
 
         BronzeSword godSword = new BronzeSword(new GodMode());
         godSword.enchantedDamage();
+
         //System.out.println(mainCharacter.setHealth(50));
 
 

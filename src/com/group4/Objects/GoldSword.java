@@ -10,6 +10,7 @@ public class GoldSword implements Weapon {
 
     public GoldSword(Enchantment enchantment) {
         this.enchantment = enchantment;
+        damage = 40;
     }
 
     public GoldSword() {
@@ -22,10 +23,10 @@ public class GoldSword implements Weapon {
     }
 
 
-    public int enchantedDamage(){
+    public void enchantedDamage(){
         enchantment.apply();
         System.out.println("enchantment applied");
-        return damage * 2;
+        damage *= 2;
     }
 
     @Override
