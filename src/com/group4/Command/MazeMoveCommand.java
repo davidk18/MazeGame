@@ -18,7 +18,34 @@ public class MazeMoveCommand implements ICommand{
     }
 
     public void execute(){
+
         maze.move(original);
+
+        System.out.println("current room trap: " + original.getCurrentRoom().getTrap());
+        if(original.getCurrentRoom().getTrap() != null)
+        {
+            System.out.println("health before trap: " + original.getHealth());
+            System.out.println("you have been damaged by the trap: " + original.getCurrentRoom().getTrap().getDescription());
+
+            if(original.getCurrentRoom().getTrap().isHasFire() == true)
+            {
+                original.setHealth(original.getHealth() - original.getCurrentRoom().getTrap().getDamage());
+                System.out.println("new health: " + original.getHealth());
+            }
+            else if(original.getCurrentRoom().getTrap().isHasSpikes() == true)
+            {
+                original.setHealth(original.getHealth() - original.getCurrentRoom().getTrap().getDamage());
+                System.out.println("new health: " + original.getHealth());
+            }
+            else if(original.getCurrentRoom().getTrap().isHasElectrified() == true)
+            {
+                original.setHealth(original.getHealth() - original.getCurrentRoom().getTrap().getDamage());
+                System.out.println("new health: " + original.getHealth());
+            }
+        }
+        else{
+            System.out.println("you have NOT been damaged by the trap");
+        }
     }
 
     public void undo(){
