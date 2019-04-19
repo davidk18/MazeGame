@@ -9,6 +9,7 @@ public class CharacterPrototype implements Cloneable {
     private int health;
     private int damage;
     private Room currentRoom;
+    private Direction directionChosen;
 
     public CharacterPrototype(CharacterPrototype characterPrototype)
     {
@@ -20,7 +21,7 @@ public class CharacterPrototype implements Cloneable {
         damage = 10;
     }
 
-    public CharacterPrototype(String description, /*Inventory inventory,*/boolean isEnemy, boolean isAlive, int health, int damage)
+    public CharacterPrototype(String description, /*Inventory inventory,*/boolean isEnemy, boolean isAlive, int health, int damage, Direction directionChosen)
     {
         this.description = description;
         //this.inventory = inventory;
@@ -28,6 +29,7 @@ public class CharacterPrototype implements Cloneable {
         this.isAlive = isAlive;
         this.health = health;
         this.damage = damage;
+        this.directionChosen = directionChosen;
     }
 
     public CharacterPrototype(String description) {
@@ -81,6 +83,10 @@ public class CharacterPrototype implements Cloneable {
     public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
     }
+
+    public void setDirectionChosen(Direction directionChosen) { this.directionChosen = directionChosen; }
+
+    public Direction getDirectionChosen() { return directionChosen; }
 
     @Override
     public CharacterPrototype clone() throws CloneNotSupportedException{

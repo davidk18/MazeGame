@@ -2,7 +2,6 @@ package com.group4.Objects;
 
 import com.group4.Interfaces.Enchantment;
 import com.group4.Interfaces.Weapon;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class BronzeShotgun implements Weapon {
 
@@ -44,7 +43,8 @@ public class BronzeShotgun implements Weapon {
 
     @Override
     public Enchantment getEnchantment() {
-        throw new NotImplementedException();
+        System.out.println("notimplementedexcep");
+        return null;
     }
 
     @Override

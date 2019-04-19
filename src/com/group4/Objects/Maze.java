@@ -23,7 +23,6 @@ public class Maze implements IMaze {
         return rooms;
     }
 
-
     @Override
     public String getMap(Room r) {
         String currentMap = "";
@@ -33,5 +32,20 @@ public class Maze implements IMaze {
             }
         }
         return currentMap;
+    }
+
+    public void move(CharacterPrototype original) {
+        try {
+            Door door = (Door) original.getCurrentRoom().getSide(original.getDirectionChosen());
+            if(door.getRoom1().equals(original.getCurrentRoom())) {
+                original.setCurrentRoom(door.getRoom2());
+            }
+            else
+            {
+                original.setCurrentRoom(door.getRoom1());
+            }
+        } catch (ClassCastException e) {
+            System.out.println("You tried to walk through a wall!");
+        }
     }
 }
