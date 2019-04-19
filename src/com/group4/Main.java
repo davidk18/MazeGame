@@ -90,12 +90,12 @@ public class Main {
                     state.executeLatestCommand();
                     break;
                 case "go west":
-                    original.setDirectionChosen(Direction.East);
+                    original.setDirectionChosen(Direction.West);
                     state.addAction(new MazeMoveCommand(maze, original));
                     state.executeLatestCommand();
                     break;
                 case "go east":
-                    original.setDirectionChosen(Direction.West);
+                    original.setDirectionChosen(Direction.East);
                     state.addAction(new MazeMoveCommand(maze, original));
                     state.executeLatestCommand();
                     break;
