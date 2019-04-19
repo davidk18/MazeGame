@@ -1,5 +1,8 @@
 package com.group4;
 
+import com.group4.Command.GameState;
+import com.group4.Command.LocalGameStateManager;
+import com.group4.Command.MazeMoveCommand;
 import com.group4.Factory.SimpleWeaponFactory;
 import com.group4.Factory.WeaponFactory;
 import com.group4.Interfaces.IMaze;
@@ -35,8 +38,11 @@ public class Main {
 
 
 
+        LocalGameStateManager gameStateManager = new LocalGameStateManager();
+        GameState state = new GameState(maze);
+        gameStateManager.save(state);
 
-        CharacterPrototype original = new CharacterPrototype("johnathon", false, true, 100, 10);
+        CharacterPrototype original = new CharacterPrototype("johnathon", false, true, 100, 10, null);
         boolean exit = false;
         boolean mazeCreated = false;
         while(!mazeCreated && !exit) {
@@ -71,16 +77,27 @@ public class Main {
             String input = getInput().toLowerCase();
             switch (input) {
                 case "go north":
-                    move(original, Direction.North);
+                    original.setDirectionChosen(Direction.North);
+                    state.addAction(new MazeMoveCommand(maze, original));
+                    state.executeLatestCommand();
                     break;
                 case "go south":
-                    move(original, Direction.South);
+                    original.setDirectionChosen(Direction.South);
+                    state.addAction(new MazeMoveCommand(maze, original));
+                    state.executeLatestCommand();
                     break;
                 case "go west":
-                    move(original, Direction.West);
+                    original.setDirectionChosen(Direction.East);
+                    state.addAction(new MazeMoveCommand(maze, original));
+                    state.executeLatestCommand();
                     break;
                 case "go east":
-                    move(original, Direction.East);
+                    original.setDirectionChosen(Direction.West);
+                    state.addAction(new MazeMoveCommand(maze, original));
+                    state.executeLatestCommand();
+                    break;
+                case "undo last":
+                    state.undoLatestCommand();
                     break;
                 case "exit":
                     exit = true;
@@ -93,23 +110,6 @@ public class Main {
         }
 
     }
-
-
-    private static void move(CharacterPrototype original, Direction direction) {
-        try {
-            Door door = (Door) original.getCurrentRoom().getSide(direction);
-            if(door.getRoom1().equals(original.getCurrentRoom())) {
-                original.setCurrentRoom(door.getRoom2());
-            }
-            else
-            {
-                original.setCurrentRoom(door.getRoom1());
-            }
-        } catch (ClassCastException e) {
-            System.out.println("You tried to walk through a wall!");
-        }
-    }
-
 
     private static String getInput() {
         Scanner in = new Scanner(System.in);
@@ -149,7 +149,7 @@ public class Main {
 
         System.out.println(mainCharacter);
 
-        CharacterPrototype original = new CharacterPrototype("johnathon", false, true, 100, 10);
+        CharacterPrototype original = new CharacterPrototype("johnathon", false, true, 100, 10, null);
         System.out.println(original.getDescription());
 
         //Clone and Modify what is required
