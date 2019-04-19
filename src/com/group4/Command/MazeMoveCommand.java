@@ -21,7 +21,7 @@ public class MazeMoveCommand implements ICommand{
 
         maze.move(original);
 
-        System.out.println("current room trap: " + original.getCurrentRoom().getTrap());
+        //System.out.println("current room trap: " + original.getCurrentRoom().getTrap());
         if(original.getCurrentRoom().getTrap() != null)
         {
             System.out.println("health before trap: " + original.getHealth());
