@@ -12,6 +12,7 @@ public class Main {
 
     public static void main(String[] args) throws CloneNotSupportedException {
 //        TestCode();
+
         MazeGame game = new MazeGame();
         Maze maze = game.createMaze();
         CharacterPrototype original = new CharacterPrototype("johnathon", false, true, 100, 10);
@@ -69,7 +70,7 @@ public class Main {
     }
 
     private static void TestCode() throws CloneNotSupportedException {
-        MazeGame game = new MazeGame();
+        /*MazeGame game = new MazeGame();
         Maze maze = game.createMaze();
 
         SimpleWeaponFactory simpleFactory = new SimpleWeaponFactory();
@@ -110,6 +111,11 @@ public class Main {
         cloned.setDamage(30);
         cloned.setEnemy(true);
         System.out.println("clone name: " + cloned.getDescription() + "clone damage " + cloned.getDamage() +  cloned.getHealth());
-        ConcreteFrameWork.attack(original);
+        ConcreteFrameWork.attack(original);*/
+
+        //test builder for trap
+       /* trapBuilder trap1 = new trapBuilder.Builder().setDescription("this trap covers any poor soul who stumbles upon it in flames").setTrapActive(true).setHasFire(true).build();
+        System.out.println("trap1: " + trap1);
+        System.out.println(trap1.getDescription());*/
     }
 }
