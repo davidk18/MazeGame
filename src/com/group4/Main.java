@@ -2,6 +2,8 @@ package com.group4;
 
 import com.group4.Factory.SimpleWeaponFactory;
 import com.group4.Factory.WeaponFactory;
+import com.group4.Interfaces.IMaze;
+import com.group4.Interfaces.MazeBuilder;
 import com.group4.Interfaces.Weapon;
 import com.group4.Objects.*;
 import com.group4.Interceptor.ConcreteFrameWork;
@@ -10,17 +12,62 @@ import java.util.Scanner;
 
 public class Main {
 
+    private static Maze maze;
+
     public static void main(String[] args) throws CloneNotSupportedException {
 //        TestCode();
-        MazeGame game = new MazeGame();
-        Maze maze = game.createMaze();
+
+//        A a = new A();
+//        a.aText = "First text";
+//        System.out.println(a.aText);
+//        B b = new B();
+//        b.bText = "haha";
+//        b.a = a;
+//        System.out.println(b.a.aText);
+//        a.aText = "Test text";
+//        System.out.println(a.aText);
+//        System.out.println(b.a.aText);
+//        a = new A();
+//        a.aText = "-----------------------------";
+//        b.a1 = a;
+//        System.out.println(b.a.aText);
+//        System.out.println(b.a1.aText);
+
+
+
+
         CharacterPrototype original = new CharacterPrototype("johnathon", false, true, 100, 10);
-        original.setCurrentRoom(maze.getRooms().get(0));
         boolean exit = false;
+        boolean mazeCreated = false;
+        while(!mazeCreated && !exit) {
+            System.out.println();
+            System.out.println("Please select type of a maze you want to create: ");
+            System.out.println("U: U-shaped maze");
+            System.out.println("L: L-shaped maze");
+            System.out.println("H: H-shaped maze");
+            System.out.println("exit: Quit game");
+            String input = getInput().toLowerCase();
+            MazeBuilder builder;
+            switch (input) {
+                case "u":
+                    builder = new UMazeBuilder();
+                    MazeCreator mazeCreator = new MazeCreator(builder);
+                    mazeCreator.constructMaze();
+                    maze = mazeCreator.getMaze();
+                    mazeCreated = true;
+                    break;
+                 default:
+                     exit = true;
+                break;
+            }
+        }
+        if(!exit) {
+            original.setCurrentRoom(maze.getRooms().get(0));
+        }
         while(!exit) {
             System.out.println();
             System.out.println(original.getDescription() + " is currently in " + original.getCurrentRoom());
-            String input = getInput();
+            String input = getInput().toLowerCase();
             switch (input) {
                 case "go north":
                     move(original, Direction.North);
@@ -46,6 +93,7 @@ public class Main {
 
     }
 
+
     private static void move(CharacterPrototype original, Direction direction) {
         try {
             Door door = (Door) original.getCurrentRoom().getSide(direction);
@@ -69,8 +117,8 @@ public class Main {
     }
 
     private static void TestCode() throws CloneNotSupportedException {
-        MazeGame game = new MazeGame();
-        Maze maze = game.createMaze();
+//        MazeGame game = new MazeGame();
+//        Maze maze = game.createMaze();
 
         SimpleWeaponFactory simpleFactory = new SimpleWeaponFactory();
         WeaponFactory factory = simpleFactory.getWeaponFactory("Gold");

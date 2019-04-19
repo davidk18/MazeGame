@@ -2,25 +2,42 @@ package com.group4.Objects;
 
 
 public class Door extends MapSite {
-    public Door(Room r1, Room r2){
-        _doorNr = _doorCnt++;
+
+    private static int doorCnt = 1;
+    private int doorNr;
+    private Room room1;
+    private Room room2;
+
+
+    public Door() {
+
+    }
+
+    public Door(Room r){
+        doorNr = doorCnt++;
 //        System.out.println("creating a Door #" + _doorNr + " between " + r1 + " and " + r2);
-        _room1 = r1;
-        _room2 = r2;
+        room1 = r;
+//        _room2 = r2;
     }
+
+    public void setRooms(Room r1, Room r2) {
+        room1 = r1;
+        room2 = r2;
+    }
+
+    public void setSecondRoom(Room r) {
+        room2 = r;
+    }
+
     public String toString(){
-        return "Door #" + new Integer(_doorNr).toString();
+        return "Door #" + new Integer(doorNr).toString();
     }
-    private static int _doorCnt = 1;
-    private int _doorNr;
-    private Room _room1;
-    private Room _room2;
 
     public Room getRoom1() {
-        return _room1;
+        return room1;
     }
 
     public Room getRoom2() {
-        return _room2;
+        return room2;
     }
 }

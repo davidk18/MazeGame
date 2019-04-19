@@ -3,11 +3,14 @@ package com.group4.Objects;
 import com.group4.Objects.MapSite;
 
 public class Wall extends MapSite {
+
+    private int wallNr;
+    private static int wallCnt = 1;
+
     public Wall(){
-        _wallNr = _wallCnt++;
+        wallNr = wallCnt++;
 //        System.out.println("creating Wall #" + new Integer(_wallNr).toString());
     }
-    public String toString(){ return "Wall #" + new Integer(_wallNr).toString(); }
-    private int _wallNr;
-    private static int _wallCnt = 1;
+    public String toString(){ return "Wall #" + new Integer(wallNr).toString(); }
+
 }
