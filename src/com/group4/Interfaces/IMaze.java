@@ -8,4 +8,5 @@ import java.util.List;
 public interface IMaze {
     void addRoom(Room r);
     List<Room> getRooms();
+    String getMap(Room r);
 }

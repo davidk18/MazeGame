@@ -8,7 +8,7 @@ public class UMazeBuilder implements MazeBuilder {
 
     @Override
     public void buildMaze() {
-        maze = new Maze();
+        maze = new Maze(buildMap());
     }
 
     @Override
@@ -43,6 +43,15 @@ public class UMazeBuilder implements MazeBuilder {
         maze.addRoom(r2);
         d1.setRooms(r1, r2);
 
+    }
+
+    @Override
+    public String buildMap() {
+        String map = "";
+        map += "[1]     [5]\n";
+        map += " |       |\n";
+        map += "[2]-[3]-[4]\n";
+        return map;
     }
 
     @Override

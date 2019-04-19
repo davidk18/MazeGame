@@ -67,6 +67,7 @@ public class Main {
         while(!exit) {
             System.out.println();
             System.out.println(original.getDescription() + " is currently in " + original.getCurrentRoom());
+            System.out.println(maze.getMap(original.getCurrentRoom()));
             String input = getInput().toLowerCase();
             switch (input) {
                 case "go north":

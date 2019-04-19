@@ -8,9 +8,11 @@ import java.util.List;
 public class Maze implements IMaze {
 
     private List<Room> rooms;
+    private String map;
 
-    public Maze() {
+    public Maze(String map) {
         rooms = new ArrayList<>();
+        this.map = map;
     }
 
     public void addRoom(Room r) {
@@ -19,5 +21,17 @@ public class Maze implements IMaze {
 
     public List<Room> getRooms() {
         return rooms;
+    }
+
+
+    @Override
+    public String getMap(Room r) {
+        String currentMap = "";
+        for(int i = 0; i < map.length(); i++) {
+            if(map.charAt(i) == Integer.toString(r.getRoomNr()).charAt(0)) {
+                currentMap = map.replace(map.charAt(i), 'X');
+            }
+        }
+        return currentMap;
     }
 }

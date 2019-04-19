@@ -48,6 +48,8 @@ public class Room {
         return "Room #" + new Integer(roomNr).toString();
     }
 
+    public int getRoomNr() { return  roomNr; }
+
     public Item getItem() {
         return item;
     }
