@@ -159,5 +159,12 @@ public class Main {
         cloned.setEnemy(true);
         System.out.println("clone name: " + cloned.getDescription() + "clone damage " + cloned.getDamage() +  cloned.getHealth());
         ConcreteFrameWork.attack(original);
+
+        //test builder for trap
+//        trapBuilder trap1 = new trapBuilder.Builder().setDescription("this trap covers any poor soul who stumbles upon it in flames").setTrapActive(true).setHasFire(true).build();
+//        System.out.println("trap1: " + trap1);
+//        System.out.println(trap1.getDescription());
+
+
     }
 }
