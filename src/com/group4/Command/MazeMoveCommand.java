@@ -45,4 +45,12 @@ public class MazeMoveCommand implements ICommand{
                 break;
         }
     }
+
+    public void setDirection(){
+        this.direction = direction;
+    }
+
+    public Direction getDirection(){
+        return direction;
+    }
 }

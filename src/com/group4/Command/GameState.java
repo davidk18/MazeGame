@@ -1,6 +1,7 @@
 package com.group4.Command;
 
 import com.group4.Objects.CharacterPrototype;
+import com.group4.Objects.Direction;
 import com.group4.Objects.Maze;
 
 import javax.swing.*;
@@ -20,6 +21,12 @@ public class GameState {
         this.character = character;
     }
 
+    public GameState(Maze gameMaze, CharacterPrototype character, ArrayList<ICommand> actions){
+        this.gameMaze = gameMaze;
+        this.character = character;
+        this.actions = actions;
+    }
+
     public void executeLatestCommand(){
         ICommand c = actions.get(actions.size()-1);
         System.out.println(actions.size());
@@ -32,12 +39,12 @@ public class GameState {
             ICommand c = actions.get(actions.size() - 1);
             c.undo();
             actions.remove(actions.size()-1);
+
         }
         else {
             System.out.println("No undos");
         }
     }
-
     public void addAction(MazeMoveCommand action){
         actions.add(action);
     }
@@ -61,4 +68,9 @@ public class GameState {
     public ArrayList<ICommand> getActions(){
         return actions;
     }
+
+    public void removeActions(){
+        actions.clear();
+    }
+
 }
