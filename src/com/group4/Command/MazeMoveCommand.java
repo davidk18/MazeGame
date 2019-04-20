@@ -62,6 +62,8 @@ public class MazeMoveCommand implements ICommand{
             } else {
                 System.out.println("No enemies present in this room ");
             }
+        }else {
+            System.out.println("No enemies present in this room ");
         }
     }
 
