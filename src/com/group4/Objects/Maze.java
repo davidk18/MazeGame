@@ -34,18 +34,41 @@ public class Maze implements IMaze {
         return currentMap;
     }
 
-    public void move(CharacterPrototype original) {
+    public boolean move(CharacterPrototype original) {
         try {
             Door door = (Door) original.getCurrentRoom().getSide(original.getDirectionChosen());
             if(door.getRoom1().equals(original.getCurrentRoom())) {
                 original.setCurrentRoom(door.getRoom2());
+                return true;
             }
             else
             {
                 original.setCurrentRoom(door.getRoom1());
+                return true;
             }
         } catch (ClassCastException e) {
             System.out.println("You tried to walk through a wall!");
+            return false;
         }
     }
+
+    public boolean move (CharacterPrototype original, Direction direction){
+        try {
+            Door door = (Door) original.getCurrentRoom().getSide(direction);
+            if(door.getRoom1().equals(original.getCurrentRoom())) {
+                original.setCurrentRoom(door.getRoom2());
+                return true;
+            }
+            else
+            {
+                original.setCurrentRoom(door.getRoom1());
+                return true;
+            }
+        } catch (ClassCastException e) {
+            System.out.println("You tried to walk through a wall!");
+            return false;
+        }
+    }
+
+
 }

@@ -1,5 +1,7 @@
 package com.group4.Objects;
 
+import java.util.ArrayList;
+
 public class CharacterPrototype implements Cloneable {
 
     private String description;
@@ -10,6 +12,7 @@ public class CharacterPrototype implements Cloneable {
     private int damage;
     private Room currentRoom;
     private Direction directionChosen;
+    private ArrayList<Direction> pathTaken = new ArrayList<>();
 
     public CharacterPrototype(CharacterPrototype characterPrototype)
     {
@@ -84,7 +87,15 @@ public class CharacterPrototype implements Cloneable {
         this.currentRoom = currentRoom;
     }
 
-    public void setDirectionChosen(Direction directionChosen) { this.directionChosen = directionChosen; }
+    public void setDirectionChosen(Direction directionChosen) {
+        this.directionChosen = directionChosen;
+        pathTaken.add(directionChosen);
+        System.out.println();
+    }
+
+    public ArrayList<Direction> getPathTaken(){
+        return pathTaken;
+    }
 
     public Direction getDirectionChosen() { return directionChosen; }
 

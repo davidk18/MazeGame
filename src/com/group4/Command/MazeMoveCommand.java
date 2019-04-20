@@ -21,6 +21,10 @@ public class MazeMoveCommand implements ICommand{
         maze.move(original);
     }
 
+    public void execute(Direction direction){
+        maze.move(original, direction);
+    }
+
     public void undo(){
         switch (direction.toString()) {
             case "North":

@@ -1,18 +1,23 @@
 package com.group4.Command;
 
+import com.group4.Objects.CharacterPrototype;
 import com.group4.Objects.Maze;
 
 import javax.swing.*;
 import java.util.ArrayList;
 
 public class GameState {
-    private static int gameId = 0;
-    private Maze gameStateMaze;
+    private Maze gameMaze; //Maybe should refactor to have maze handled here
     private ArrayList<ICommand> actions = new ArrayList<ICommand>();
+    private CharacterPrototype character;
 
-    public GameState(Maze gameStateMaze){
-        this.gameStateMaze = gameStateMaze;
-        gameId++;
+    public GameState(){
+
+    }
+
+    public GameState(Maze gameMaze, CharacterPrototype character){
+        this.gameMaze = gameMaze;
+        this.character = character;
     }
 
     public void executeLatestCommand(){
@@ -23,13 +28,34 @@ public class GameState {
 
     public void undoLatestCommand(){
         System.out.println("test");
-        ICommand c = actions.get(actions.size()-1);
-        c.undo();
-        actions.remove(c);
+        if (actions.size() > 0) {
+            ICommand c = actions.get(actions.size() - 1);
+            c.undo();
+            actions.remove(actions.size()-1);
+        }
+        else {
+            System.out.println("No undos");
+        }
     }
 
     public void addAction(MazeMoveCommand action){
         actions.add(action);
+    }
+
+    public void setMaze(Maze gameMaze){
+        this.gameMaze = gameMaze;
+    }
+
+    public void setCharacter(CharacterPrototype character){
+        this.character = character;
+    }
+
+    public CharacterPrototype getCharacter(){
+        return character;
+    }
+
+    public Maze getGameMaze(){
+        return gameMaze;
     }
 
     public ArrayList<ICommand> getActions(){

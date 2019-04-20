@@ -8,6 +8,7 @@ import com.group4.Factory.WeaponFactory;
 import com.group4.Interfaces.IMaze;
 import com.group4.Interfaces.MazeBuilder;
 import com.group4.Interfaces.Weapon;
+import com.group4.Interpreter.Combiner;
 import com.group4.Objects.*;
 import com.group4.Interceptor.ConcreteFrameWork;
 
@@ -15,7 +16,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static Maze maze;
+    private Maze maze;
 
     public static void main(String[] args) throws CloneNotSupportedException {
 //        TestCode();
@@ -39,10 +40,8 @@ public class Main {
 
 
         LocalGameStateManager gameStateManager = new LocalGameStateManager();
-        GameState state = new GameState(maze);
-        gameStateManager.save(state);
-
-        CharacterPrototype original = new CharacterPrototype("johnathon", false, true, 100, 10, null);
+        GameState game = new GameState();
+        CharacterPrototype character;
         boolean exit = false;
         boolean mazeCreated = false;
         while(!mazeCreated && !exit) {
@@ -59,7 +58,9 @@ public class Main {
                     builder = new UMazeBuilder();
                     MazeCreator mazeCreator = new MazeCreator(builder);
                     mazeCreator.constructMaze();
-                    maze = mazeCreator.getMaze();
+                    game.setMaze(mazeCreator.getMaze());
+                    character = new CharacterPrototype("johnathon", false, true, 100, 10, null);
+                    game.setCharacter(character);
                     mazeCreated = true;
                     break;
                  default:
@@ -68,36 +69,49 @@ public class Main {
             }
         }
         if(!exit) {
-            original.setCurrentRoom(maze.getRooms().get(0));
+            game.getCharacter().setCurrentRoom(game.getGameMaze().getRooms().get(0));
         }
         while(!exit) {
             System.out.println();
-            System.out.println(original.getDescription() + " is currently in " + original.getCurrentRoom());
-            System.out.println(maze.getMap(original.getCurrentRoom()));
+            System.out.println(game.getCharacter().getDescription() + " is currently in " + game.getCharacter().getCurrentRoom());
+            System.out.println(game.getGameMaze().getMap(game.getCharacter().getCurrentRoom()));
             String input = getInput().toLowerCase();
             switch (input) {
                 case "go north":
-                    original.setDirectionChosen(Direction.North);
-                    state.addAction(new MazeMoveCommand(maze, original));
-                    state.executeLatestCommand();
+                    game.getCharacter().setDirectionChosen(Direction.North);
+                    game.addAction(new MazeMoveCommand(game.getGameMaze(), game.getCharacter()));
+                    game.executeLatestCommand();
                     break;
                 case "go south":
-                    original.setDirectionChosen(Direction.South);
-                    state.addAction(new MazeMoveCommand(maze, original));
-                    state.executeLatestCommand();
+                    game.getCharacter().setDirectionChosen(Direction.South);
+                    game.addAction(new MazeMoveCommand(game.getGameMaze(), game.getCharacter()));
+                    game.executeLatestCommand();
                     break;
                 case "go west":
-                    original.setDirectionChosen(Direction.East);
-                    state.addAction(new MazeMoveCommand(maze, original));
-                    state.executeLatestCommand();
+                    game.getCharacter().setDirectionChosen(Direction.West);
+                    game.addAction(new MazeMoveCommand(game.getGameMaze(), game.getCharacter()));
+                    game.executeLatestCommand();
                     break;
                 case "go east":
-                    original.setDirectionChosen(Direction.West);
-                    state.addAction(new MazeMoveCommand(maze, original));
-                    state.executeLatestCommand();
+                    game.getCharacter().setDirectionChosen(Direction.East);
+                    game.addAction(new MazeMoveCommand(game.getGameMaze(), game.getCharacter()));
+                    game.executeLatestCommand();
                     break;
                 case "undo last":
-                    state.undoLatestCommand();
+                    game.undoLatestCommand();
+                    break;
+                case "save game":
+                    game = gameStateManager.save(game);
+                    break;
+                case "display saves":
+                    gameStateManager.displaySaves();
+                    break;
+                case "1":
+                    game.getCharacter().setCurrentRoom(game.getGameMaze().getRooms().get(0));
+                    gameStateManager.load(1);
+                    break;
+                case "combine":
+                    Combiner combiner = new Combiner();
                     break;
                 case "exit":
                     exit = true;

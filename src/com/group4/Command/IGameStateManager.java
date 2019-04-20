@@ -2,6 +2,8 @@ package com.group4.Command;
 
 public interface IGameStateManager {
 
-    void load(GameState state);
-    void save(GameState state);
+    void displaySaves();
+    void load(int saveId);
+    GameState save(GameState state);
+
 }
