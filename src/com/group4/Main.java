@@ -177,7 +177,9 @@ public class Main {
         int sizeOfRooms = size;
         //System.out.println("num of total rooms: " + sizeOfRooms);
         int randomNum = (int) (Math.random() * sizeOfRooms-1);
-       // System.out.println("num of total rooms: " + randomNum);
+        if(randomNum == 0) {
+             System.out.println("Tread carefully there is a trap generated in this room");
+        }
 
         int trapSelection = (int)(Math.random() * 3);
         if(trapSelection == 0) {
@@ -189,12 +191,12 @@ public class Main {
         else if(trapSelection == 1){
             trapBuilder trap1 = new trapBuilder.Builder().setDescription("this trap has pressure sensors that have been signaled and just shot spikes on the character that took the wrong step").setTrapActive(true).setHasSpikes(true).build();
             maze.getRooms().get(randomNum).addTrap(trap1);
-            System.out.println("trap added to room: " + randomNum + "trap added is: " + trap1.getDescription());
+            //System.out.println("trap added to room: " + randomNum + "trap added is: " + trap1.getDescription());
         }
         else if(trapSelection == 2) {
             trapBuilder trap1 = new trapBuilder.Builder().setDescription("this trap sends 10,000 volts of electricity coarsing through the misfortunate characters body").setTrapActive(true).setHasElectrified(true).build();
             maze.getRooms().get(randomNum).addTrap(trap1);
-            System.out.println("trap added to room: " + randomNum + "trap added is: " + trap1.getDescription());
+            //System.out.println("trap added to room: " + randomNum + "trap added is: " + trap1.getDescription());
         }
         else{
             System.out.print("no trap inserted this time around.");
