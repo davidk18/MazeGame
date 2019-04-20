@@ -22,6 +22,7 @@ public class MazeMoveCommand implements ICommand{
         maze.move(original);
 
         //System.out.println("current room trap: " + original.getCurrentRoom().getTrap());
+        //code for traps
         if(original.getCurrentRoom().getTrap() != null)
         {
             System.out.println("health before trap: " + original.getHealth());
@@ -45,6 +46,22 @@ public class MazeMoveCommand implements ICommand{
         }
         else{
             System.out.println("you have NOT been damaged by the trap");
+        }
+
+        //code for enemies
+        if(original.getCurrentRoom().getEnemy() != null) {
+            if (original.getCurrentRoom().getEnemy().getDescription() == "zombie") {
+                System.out.println("Theres an emeny in this room ");
+                System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + " Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + " Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
+            } else if (original.getCurrentRoom().getEnemy().getDescription() == "Thief") {
+                System.out.println("Theres an emeny in this room ");
+                System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + " Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + " Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
+            } else if (original.getCurrentRoom().getEnemy().getDescription() == "Ninja") {
+                System.out.println("Theres an emeny in this room ");
+                System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + " Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + " Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
+            } else {
+                System.out.println("No enemies present in this room ");
+            }
         }
     }
 

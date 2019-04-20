@@ -15,6 +15,7 @@ public class Room {
     private Item item;
     private List<CharacterPrototype> characters;
     private trapBuilder trap;
+    private CharacterPrototype enemy;
 
     public Room(Builder builder) {
 //        _roomNr = _roomCnt++;
@@ -65,6 +66,15 @@ public class Room {
 
     public trapBuilder getTrap(){
         return this.trap;
+    }
+
+    public CharacterPrototype addEnemy(CharacterPrototype clonedEnemy)
+    {
+        this.enemy = clonedEnemy;
+        return clonedEnemy;
+    }
+    public CharacterPrototype getEnemy(){
+        return this.enemy;
     }
 
     public static class Builder {

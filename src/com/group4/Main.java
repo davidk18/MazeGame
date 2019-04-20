@@ -64,6 +64,7 @@ public class Main {
                     int size = maze.getRooms().size();
                     //System.out.println(size);
                     generateTrap(size);
+                    generateEnemies(size, original);
                     break;
                  default:
                      exit = true;
@@ -201,5 +202,45 @@ public class Main {
         else{
             System.out.print("no trap inserted this time around.");
         }
+    }
+
+    public static void generateEnemies(int size, CharacterPrototype original) throws CloneNotSupportedException
+    {
+        int sizeOfRooms = size;
+        //System.out.println("num of total rooms: " + sizeOfRooms);
+        int randomNum = (int) (Math.random() * sizeOfRooms-1);
+
+        int enemySelection = (int)(Math.random() * 3);
+
+        //Clone and Modify what is required
+        CharacterPrototype clonedZombie = original.clone();
+        clonedZombie.setDescription("zombie");
+        clonedZombie.setEnemy(true);
+        clonedZombie.setDamage(8);
+        //System.out.println("clonedZombie name: " + clonedZombie.getDescription() + "clonedZombie damage " + clonedZombie.getDamage() + " health: " +   clonedZombie.getHealth());
+
+        CharacterPrototype clonedThief = clonedZombie.clone();
+        clonedThief.setDescription("Thief");
+        clonedThief.setDamage(12);
+       // System.out.println("clonedThief name: " + clonedThief.getDescription() + "clonedThief damage " + clonedThief.getDamage() + " health: " +   clonedThief.getHealth());
+
+        CharacterPrototype clonedNinja = clonedZombie.clone();
+        clonedNinja.setDescription("Ninja");
+        clonedNinja.setDamage(15);
+        //System.out.println("clonedNinja name: " + clonedNinja.getDescription() + "clonedNinja damage " + clonedNinja.getDamage() + " health: " +   clonedNinja.getHealth());
+
+        if(enemySelection == 0)
+        {
+            maze.getRooms().get(randomNum).addEnemy(clonedZombie);
+        }
+        else if(enemySelection == 1)
+        {
+            maze.getRooms().get(randomNum).addEnemy(clonedThief);
+        }
+        else if(enemySelection == 2)
+        {
+            maze.getRooms().get(randomNum).addEnemy(clonedNinja);
+        }
+
     }
 }
