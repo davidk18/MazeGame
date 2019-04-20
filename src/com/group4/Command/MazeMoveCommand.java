@@ -52,13 +52,13 @@ public class MazeMoveCommand implements ICommand{
         if(original.getCurrentRoom().getEnemy() != null) {
             if (original.getCurrentRoom().getEnemy().getDescription() == "zombie") {
                 System.out.println("Theres an emeny in this room ");
-                System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + " Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + " Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
+                System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + "\n Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + "\n Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
             } else if (original.getCurrentRoom().getEnemy().getDescription() == "Thief") {
                 System.out.println("Theres an emeny in this room ");
-                System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + " Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + " Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
+                System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + "\n Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + "\n Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
             } else if (original.getCurrentRoom().getEnemy().getDescription() == "Ninja") {
                 System.out.println("Theres an emeny in this room ");
-                System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + " Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + " Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
+                System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + "\n Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + "\n Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
             } else {
                 System.out.println("No enemies present in this room ");
             }
