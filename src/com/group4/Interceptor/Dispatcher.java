@@ -19,7 +19,9 @@ public class Dispatcher implements Interceptor{
 		enemy.setHealth(enemy.getHealth() - mainCharacter.getDamage());
 		if(enemy.getHealth() <= 0){
 			System.out.println("You have killed the " + enemy.getDescription());
-			//the enemy has to be removed
+			
+			mainCharacter.getCurrentRoom().removeEnemy();
+			System.out.println("enemy died and has been removed");
 		}
 		myInterceptor.preRequest(mainCharacter, enemy);
 		

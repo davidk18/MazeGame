@@ -50,6 +50,8 @@ public class MazeMoveCommand implements ICommand{
 
         //code for enemies
         if(original.getCurrentRoom().getEnemy() != null) {
+            System.out.println("enemy health checker: " + original.getCurrentRoom().getEnemy().getHealth());
+
             if (original.getCurrentRoom().getEnemy().getDescription() == "zombie") {
                 System.out.println("Theres an emeny in this room ");
                 System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + "\n Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + "\n Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());

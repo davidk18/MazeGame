@@ -77,6 +77,12 @@ public class Room {
         return this.enemy;
     }
 
+    public CharacterPrototype removeEnemy()
+    {
+        this.enemy = null;
+        return null;
+    }
+
     public static class Builder {
         private final int roomNr;
         private static int roomCnt = 1;
