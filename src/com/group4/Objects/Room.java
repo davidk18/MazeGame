@@ -2,7 +2,6 @@ package com.group4.Objects;
 
 import com.group4.Interfaces.Item;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +14,8 @@ public class Room {
     private final MapSite eastSide;
     private Item item;
     private List<CharacterPrototype> characters;
+    private trapBuilder trap;
+    private CharacterPrototype enemy;
 
     public Room(Builder builder) {
 //        _roomNr = _roomCnt++;
@@ -58,8 +59,23 @@ public class Room {
         return characters;
     }
 
+    public trapBuilder addTrap(trapBuilder trap1) {
+        this.trap = trap1;
+        return trap1;
+    }
 
+    public trapBuilder getTrap(){
+        return this.trap;
+    }
 
+    public CharacterPrototype addEnemy(CharacterPrototype clonedEnemy)
+    {
+        this.enemy = clonedEnemy;
+        return clonedEnemy;
+    }
+    public CharacterPrototype getEnemy(){
+        return this.enemy;
+    }
 
     public static class Builder {
         private final int roomNr;

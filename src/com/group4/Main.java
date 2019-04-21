@@ -15,7 +15,7 @@ import com.group4.Interceptor.ConcreteFrameWork;
 import java.util.Scanner;
 
 public class Main {
-
+//fuck you git
     private Maze maze;
 
     public static void main(String[] args) throws CloneNotSupportedException {

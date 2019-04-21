@@ -9,6 +9,7 @@ import com.group4.Interpreter.Combiner;
 public class Game {
     LocalGameStateManager gameStateManager = new LocalGameStateManager();
     CharacterPrototype character = new CharacterPrototype("johnathon", false, true, 100, 10, null);
+    GameState game = new GameState();
     boolean exit;
     boolean mazeCreated;
 
@@ -19,11 +20,7 @@ public class Game {
     }
 
     private void begin() {
-        GameState game = new GameState();
-        LocalGameStateManager gameStateManager = new LocalGameStateManager();
-        CharacterPrototype character = new CharacterPrototype("johnathon", false, true, 100, 10, null);
         game.setCharacter(character);
-
         while (!mazeCreated && !exit) {
             System.out.println();
             System.out.println("Please select type of a maze you want to create: ");
@@ -35,7 +32,6 @@ public class Game {
             switch (input) {
                 case "u":
                     MazeBuilder builder;
-
                     builder = new UMazeBuilder();
                     MazeCreator mazeCreator = new MazeCreator(builder);
                     mazeCreator.constructMaze();
@@ -103,5 +99,76 @@ public class Game {
                     break;
             }
         }
+    }
+
+    public void generateTrap(int size)
+    {
+        int sizeOfRooms = size;
+        //System.out.println("num of total rooms: " + sizeOfRooms);
+        int randomNum = (int) (Math.random() * sizeOfRooms-1);
+        if(randomNum == 0) {
+            System.out.println("Tread carefully there is a trap generated in this room");
+        }
+
+        int trapSelection = (int)(Math.random() * 3);
+        if(trapSelection == 0) {
+            trapBuilder trap1 = new trapBuilder.Builder().setDescription("this trap covers any poor soul who stumbles upon it in flames").setTrapActive(true).setHasFire(true).build();
+            // System.out.println("trap1: " + trap1.getDescription());
+            game.getGameMaze().getRooms().get(randomNum).addTrap(trap1);
+            //System.out.println("trap added to room: " + randomNum + "trap added is: " + trap1.getDescription());
+        }
+        else if(trapSelection == 1){
+            trapBuilder trap1 = new trapBuilder.Builder().setDescription("this trap has pressure sensors that have been signaled and just shot spikes on the character that took the wrong step").setTrapActive(true).setHasSpikes(true).build();
+            game.getGameMaze().getRooms().get(randomNum).addTrap(trap1);
+            //System.out.println("trap added to room: " + randomNum + "trap added is: " + trap1.getDescription());
+        }
+        else if(trapSelection == 2) {
+            trapBuilder trap1 = new trapBuilder.Builder().setDescription("this trap sends 10,000 volts of electricity coarsing through the misfortunate characters body").setTrapActive(true).setHasElectrified(true).build();
+            game.getGameMaze().getRooms().get(randomNum).addTrap(trap1);
+            //System.out.println("trap added to room: " + randomNum + "trap added is: " + trap1.getDescription());
+        }
+        else{
+            System.out.print("no trap inserted this time around.");
+        }
+    }
+
+    public void generateEnemies(int size, CharacterPrototype original) throws CloneNotSupportedException
+    {
+        int sizeOfRooms = size;
+        //System.out.println("num of total rooms: " + sizeOfRooms);
+        int randomNum = (int) (Math.random() * sizeOfRooms-1);
+
+        int enemySelection = (int)(Math.random() * 3);
+
+        //Clone and Modify what is required
+        CharacterPrototype clonedZombie = original.clone();
+        clonedZombie.setDescription("zombie");
+        clonedZombie.setEnemy(true);
+        clonedZombie.setDamage(8);
+        //System.out.println("clonedZombie name: " + clonedZombie.getDescription() + "clonedZombie damage " + clonedZombie.getDamage() + " health: " +   clonedZombie.getHealth());
+
+        CharacterPrototype clonedThief = clonedZombie.clone();
+        clonedThief.setDescription("Thief");
+        clonedThief.setDamage(12);
+        // System.out.println("clonedThief name: " + clonedThief.getDescription() + "clonedThief damage " + clonedThief.getDamage() + " health: " +   clonedThief.getHealth());
+
+        CharacterPrototype clonedNinja = clonedZombie.clone();
+        clonedNinja.setDescription("Ninja");
+        clonedNinja.setDamage(15);
+        //System.out.println("clonedNinja name: " + clonedNinja.getDescription() + "clonedNinja damage " + clonedNinja.getDamage() + " health: " +   clonedNinja.getHealth());
+
+        if(enemySelection == 0)
+        {
+            game.getGameMaze().getRooms().get(randomNum).addEnemy(clonedZombie);
+        }
+        else if(enemySelection == 1)
+        {
+            game.getGameMaze().getRooms().get(randomNum).addEnemy(clonedThief);
+        }
+        else if(enemySelection == 2)
+        {
+            game.getGameMaze().getRooms().get(randomNum).addEnemy(clonedNinja);
+        }
+
     }
 }
