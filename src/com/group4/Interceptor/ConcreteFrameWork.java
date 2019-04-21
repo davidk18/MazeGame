@@ -10,7 +10,7 @@ public class ConcreteFrameWork {
 		AttackSequence userAttack = new AttackSequence(); //this will be the attack sequence
 
 
-		userAttack.checkHealthBefore(mainCharacter, enemy, myDispatcher); //context needs to be the main character
+		userAttack.checkHealthBefore(mainCharacter, enemy, myDispatcher);
 
 		userAttack.checkHealthAfter(mainCharacter, enemy, myDispatcher);
 		
