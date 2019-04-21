@@ -74,18 +74,17 @@ public class Game {
                     game.addAction(new MazeMoveCommand(game.getGameMaze(), game.getCharacter()));
                     game.executeLatestCommand();
                     break;
-                case "undo last":
+                case "undo":
                     game.undoLatestCommand();
                     break;
-                case "save game":
+                case "save":
                     game = gameStateManager.save(game);
                     break;
                 case "display saves":
                     gameStateManager.displaySaves();
                     break;
-                case "1":
-                    game.getCharacter().setCurrentRoom(game.getGameMaze().getRooms().get(0));
-                    game = gameStateManager.load(1);
+                case "load":
+                    loadGame();
                     break;
                 case "combine":
                     Combiner combiner = new Combiner();
@@ -99,6 +98,26 @@ public class Game {
                     break;
             }
         }
+    }
+
+    private void loadGame(){
+        int max = gameStateManager.getNumberOfSaves();
+        System.out.println("Enter the save you wish to load");
+        String userInput = InputReceiver.getInput().toLowerCase();
+        int selectedSave = 0;
+        try{
+            selectedSave = Integer.parseInt(userInput);
+        }
+        catch (Exception e){
+            System.out.println("Please enter an integer");
+        }
+        if (selectedSave < max){
+            game.getCharacter().setCurrentRoom(game.getGameMaze().getRooms().get(0));
+            game = gameStateManager.load(selectedSave);
+        }
+
+
+
     }
 
     public void generateTrap(int size)

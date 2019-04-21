@@ -33,27 +33,17 @@ public class LocalGameStateManager implements IGameStateManager {
     public GameState load(int saveId){
         GameState gameToLoad = gameStates.get(saveId-1);
         ArrayList<ICommand> actions = new ArrayList<ICommand>(gameToLoad.getActions());
-        GameState state = new GameState(gameStates.get(saveId-1).getGameMaze(), gameStates.get(saveId-1).getCharacter()
-                , actions);
+        GameState state = new GameState(gameStates.get(saveId-1).getGameMaze(), gameStates.get(saveId-1).getCharacter(), actions);
         for (int i = 0; i < state.getActions().size(); i++){
             state.getActions().get(i).execute(state.getActions().get(i).getDirection());
         }
         state.removeActions();
         return state;
-     /*
-        gameStates.get(saveId-1).removeActions();
-        return state;
 
-        MazeBuilder builder = new UMazeBuilder();
-        MazeCreator mazeCreator = new MazeCreator(builder);
-        mazeCreator.constructMaze();
-        ArrayList<ICommand> actions = gameStates.get(saveId-1).getActions();
-        CharacterPrototype c = gameStates.get(saveId-1).getCharacter();
+    }
 
-        gameStates.add(new GameState(gameStates.get(saveId-1).getGameMaze(), gameStates.get(saveId-1).getCharacter()));
-        gameStates.get(saveId-1).removeActions();
-        gameStates.get(saveId-1).getCharacter().getPathTaken().clear();*/
-
+    public int getNumberOfSaves(){
+        return gameStates.size();
     }
 
 }
