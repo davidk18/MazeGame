@@ -24,7 +24,12 @@ public class ConcreteInterecptor implements Interceptor{
 		System.out.println("You did " + mainCharacter.getDamage() + " damage to the " + enemy.getDescription());
 		System.out.println("The " + enemy.getDescription()+"'s health after you attacked is: "+enemy.getHealth());
 		System.out.println("The " + enemy.getDescription()+" did " + enemy.getDamage() + " damage to you,");
-		System.out.println("Your health after attacking is: " + mainCharacter.getHealth());
+		if(mainCharacter.getHealth() <= 0){
+			System.out.print("You died, game over");// game should end here
+			System.exit(0);//one way to end not ideal
+		}
+		else System.out.println("Your health after attacking is: " + mainCharacter.getHealth());
+
 		HealthAfter.add(mainCharacter.getDescription()+"\t" + mainCharacter.getHealth());
 	}
 	

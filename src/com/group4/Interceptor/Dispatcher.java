@@ -28,12 +28,9 @@ public class Dispatcher implements Interceptor{
 
 	public void postRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) {
 		Interceptor myInterceptor = Interceptors.get(Interceptors.size()-1);
-		System.out.println(mainCharacter.getDescription()+" Finished attacking");
 		mainCharacter.setHealth(mainCharacter.getHealth() - enemy.getDamage());
-		if(mainCharacter.getHealth() <= 0){
-			System.out.print("you died");
-			//mainCharacter.isAlive() = false;
-		}
+		System.out.println(mainCharacter.getDescription()+" Finished attacking");
+
 		myInterceptor.postRequest(mainCharacter, enemy);
 	}
 
