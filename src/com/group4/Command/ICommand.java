@@ -14,4 +14,5 @@ public interface ICommand {
 
     public Direction getDirection();
 
+    public void attack();
 }

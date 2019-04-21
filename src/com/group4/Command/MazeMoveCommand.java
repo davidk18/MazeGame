@@ -91,6 +91,9 @@ public class MazeMoveCommand implements ICommand{
                 break;
         }
     }
+    public void attack(){
+
+    }
 
     public void setDirection(){
         this.direction = direction;

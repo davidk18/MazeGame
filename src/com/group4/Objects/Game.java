@@ -3,6 +3,8 @@ package com.group4.Objects;
 import com.group4.Command.GameState;
 import com.group4.Command.LocalGameStateManager;
 import com.group4.Command.MazeMoveCommand;
+import com.group4.Interceptor.ConcreteFrameWork;
+import com.group4.Interceptor.Interceptor;
 import com.group4.Interfaces.MazeBuilder;
 import com.group4.Interpreter.Combiner;
 // fu git
@@ -76,6 +78,9 @@ public class Game {
                     game.getCharacter().setDirectionChosen(Direction.East);
                     game.addAction(new MazeMoveCommand(game.getGameMaze(), game.getCharacter()));
                     game.executeLatestCommand();
+                    break;
+                case "attack":
+                    game.attack();
                     break;
                 case "undo":
                     game.undoLatestCommand();

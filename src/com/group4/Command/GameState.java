@@ -1,5 +1,6 @@
 package com.group4.Command;
 
+import com.group4.Interceptor.ConcreteFrameWork;
 import com.group4.Objects.CharacterPrototype;
 import com.group4.Objects.Direction;
 import com.group4.Objects.Maze;
@@ -71,6 +72,14 @@ public class GameState {
 
     public void removeActions(){
         actions.clear();
+    }
+
+    public void attack(){
+        if(character.getCurrentRoom().getEnemy() != null) {
+            System.out.println(character.getCurrentRoom().getEnemy().isEnemy());
+            ConcreteFrameWork.attack(character);
+        }
+        else System.out.print("There is no enemy to attack in this room");
     }
 
 }

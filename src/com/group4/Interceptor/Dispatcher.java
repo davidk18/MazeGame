@@ -24,7 +24,11 @@ public class Dispatcher implements Interceptor{
 	public void postRequest(CharacterPrototype mainCharacter) {
 		Interceptor myInterceptor = Interceptors.get(Interceptors.size()-1);
 		System.out.println(mainCharacter.getDescription()+" Finished attacking");
-		mainCharacter.setHealth(25);// i cannot set this as i cannot access the products health
+		mainCharacter.setHealth(mainCharacter.getHealth()- 15);// i cannot set this as i cannot access the products health
+		if(mainCharacter.getHealth() <= 0){
+			System.out.print("you died");
+			//mainCharacter.isAlive() = false;
+		}
 		myInterceptor.postRequest(mainCharacter);
 	}
 
