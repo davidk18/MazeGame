@@ -13,13 +13,13 @@ public class Game {
     boolean exit;
     boolean mazeCreated;
 
-    public Game(){
+    public Game() throws CloneNotSupportedException {
         exit = false;
         mazeCreated = false;
         begin();
     }
 
-    private void begin() {
+    private void begin() throws CloneNotSupportedException {
         game.setCharacter(character);
         while (!mazeCreated && !exit) {
             System.out.println();
@@ -39,6 +39,9 @@ public class Game {
                     character = new CharacterPrototype("johnathon", false, true, 100, 10, null);
                     game.setCharacter(character);
                     mazeCreated = true;
+                    int size = game.getGameMaze().getRooms().size();
+                    generateTrap(size);
+                    generateEnemies(size, character);
                     break;
                 default:
                     exit = true;
