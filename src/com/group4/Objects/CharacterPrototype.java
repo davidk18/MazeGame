@@ -20,7 +20,7 @@ public class CharacterPrototype implements Cloneable {
         //inventory = "null";
         isEnemy = false;
         isAlive = true;
-        health = 100;
+        health = 20;
         damage = 10;
     }
 

@@ -2,6 +2,7 @@ package com.group4.Interceptor;
 
 import java.util.ArrayList;
 import com.group4.Objects.CharacterPrototype;
+import com.group4.Objects.Room;
 
 public class Dispatcher implements Interceptor{
 
@@ -17,12 +18,6 @@ public class Dispatcher implements Interceptor{
 		Interceptor myInterceptor = Interceptors.get(Interceptors.size()-1);
 		System.out.println("You have attacked the " + enemy.getDescription());
 		enemy.setHealth(enemy.getHealth() - mainCharacter.getDamage());
-		if(enemy.getHealth() <= 0){
-			System.out.println("You have killed the " + enemy.getDescription());
-			
-			mainCharacter.getCurrentRoom().removeEnemy();
-			System.out.println("enemy died and has been removed");
-		}
 		myInterceptor.preRequest(mainCharacter, enemy);
 		
 		

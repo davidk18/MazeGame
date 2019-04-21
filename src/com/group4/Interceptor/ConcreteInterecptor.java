@@ -23,6 +23,10 @@ public class ConcreteInterecptor implements Interceptor{
 	public void postRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) {
 		System.out.println("You did " + mainCharacter.getDamage() + " damage to the " + enemy.getDescription());
 		System.out.println("The " + enemy.getDescription()+"'s health after you attacked is: "+enemy.getHealth());
+        if(enemy.getHealth() <= 0){
+            mainCharacter.getCurrentRoom().removeEnemy();
+            System.out.println("You killed the " + enemy.getDescription());
+        }
 		System.out.println("The " + enemy.getDescription()+" did " + enemy.getDamage() + " damage to you,");
 		if(mainCharacter.getHealth() <= 0){
 			System.out.print("You died, game over");// game should end here
