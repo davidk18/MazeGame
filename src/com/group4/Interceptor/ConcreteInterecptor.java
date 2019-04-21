@@ -21,6 +21,7 @@ public class ConcreteInterecptor implements Interceptor{
 	}
 
 	public void postRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) {
+		System.out.println("You did " + mainCharacter.getDamage() + " damage to the " + enemy.getDescription());
 		System.out.println("The " + enemy.getDescription()+"'s health after you attacked is: "+enemy.getHealth());
 		System.out.println("The " + enemy.getDescription()+" did " + enemy.getDamage() + " damage to you,");
 		System.out.println("Your health after attacking is: " + mainCharacter.getHealth());
