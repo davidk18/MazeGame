@@ -76,8 +76,7 @@ public class GameState {
 
     public void attack(){
         if(character.getCurrentRoom().getEnemy() != null) {
-            System.out.println(character.getCurrentRoom().getEnemy().isEnemy());
-            ConcreteFrameWork.attack(character);
+            ConcreteFrameWork.attack(character, character.getCurrentRoom().getEnemy());
         }
         else System.out.print("There is no enemy to attack in this room");
     }

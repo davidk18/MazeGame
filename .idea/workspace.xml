@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60fddbc4-2e7e-486d-aa5d-c140dfed24bf" name="Default Changelist" comment="Main refactored, save/load debugged, Interpreter implemented">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/ICommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/ICommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/IGameStateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/IGameStateManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/LocalGameStateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/LocalGameStateManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/MazeMoveCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/MazeMoveCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Factory/BronzeWeaponFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Factory/BronzeWeaponFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Factory/GoldWeaponFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Factory/GoldWeaponFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Factory/SimpleWeaponFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Factory/SimpleWeaponFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interceptor/AttackSequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interceptor/AttackSequence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interceptor/ConcreteFrameWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interceptor/ConcreteFrameWork.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interceptor/ConcreteInterecptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interceptor/ConcreteInterecptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interceptor/Dispatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interceptor/Dispatcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interceptor/Interceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interceptor/Interceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Objects/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Objects/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Objects/RoomFirst.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Objects/RoomFirst.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/group4/Command/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Command/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/group4/Interceptor/AttackSequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Interceptor/AttackSequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/group4/Interceptor/ConcreteFrameWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Interceptor/ConcreteFrameWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/group4/Interceptor/ConcreteInterecptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Interceptor/ConcreteInterecptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/group4/Interceptor/Dispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Interceptor/Dispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/group4/Interceptor/Interceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Interceptor/Interceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/group4/Objects/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Objects/Game.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,148 +32,73 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1558303952">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.38" value="1" />
-          <entry key="project.open.time.40" value="1" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="2" />
-          <entry key="java" value="139" />
-          <entry key="md" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="139" />
-          <entry key="Markdown" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="class" value="1" />
-          <entry key="java" value="7450" />
-          <entry key="txt" value="302" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="7450" />
-          <entry key="PLAIN_TEXT" value="302" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/Interceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/Dispatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/ConcreteInterecptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/ConcreteFrameWork.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/AttackSequence.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="93" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="93" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Command/GameState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="77" column="59" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="115" column="55" lean-forward="true" selection-start-line="115" selection-start-column="55" selection-end-line="115" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/InputReceiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/Expression.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1632#1633#0" expanded="true" />
-                <element signature="e#1664#1665#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/UMazeBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-              <folding>
-                <element signature="e#190#191#0" expanded="true" />
-                <element signature="e#233#234#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Room.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/ItemExpression.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/MinusExpression.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/MultiplyExpression.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/PlusExpression.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            <state relative-caret-position="90">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -194,11 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/Character.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Factory/SilverWeaponFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/Ammo.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Factory/SimpleWeaponFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Interfaces/Item.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Interfaces/Weapon.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Interfaces/Sword.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Interfaces/Shotgun.java" />
@@ -231,7 +165,6 @@
         <option value="$USER_HOME$/Desktop/backup/Main.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Objects/CharacterPrototype.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Objects/Maze.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Command/GameState.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Command/ICommand.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Command/MazeMoveCommand.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Command/IGameStateManager.java" />
@@ -244,6 +177,12 @@
         <option value="$PROJECT_DIR$/src/com/group4/Interpreter/PlusExpression.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Objects/InputReceiver.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interceptor/ConcreteFrameWork.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interceptor/AttackSequence.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interceptor/Interceptor.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Command/GameState.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interceptor/ConcreteInterecptor.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interceptor/Dispatcher.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Objects/Game.java" />
       </list>
     </option>
@@ -256,8 +195,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1" />
-    <option name="y" value="10" />
-    <option name="width" value="1110" />
+    <option name="y" value="23" />
+    <option name="width" value="2114" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
@@ -265,6 +204,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,6 +235,13 @@
               <item name="TheMaze" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="group4" type="462c0819:PsiDirectoryNode" />
+              <item name="Interceptor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheMaze" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TheMaze" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="group4" type="462c0819:PsiDirectoryNode" />
               <item name="Interpreter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -309,10 +256,10 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555806839958" />
@@ -433,9 +380,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="10" width="1110" height="1038" extended-state="0" />
+    <frame x="1" y="23" width="2114" height="1038" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20380953" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13175675" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -444,7 +392,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.46571428" visible="true" weight="0.3108407" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.46571428" visible="true" weight="0.31078225" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46952382" weight="0.39759037" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -528,9 +476,20 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
@@ -609,29 +568,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/CharacterProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/MazeCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Door.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Interceptor.zip/Interceptor/Context.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Interceptor.zip/Interceptor/ConcreteInterecptor.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Interceptor.zip/Interceptor/ConcreteFrameWork.java" />
     <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Item.old.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -648,20 +584,8 @@
     <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Inventory.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/A.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/B.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/A.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/B.java" />
     <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/GodMode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -693,13 +617,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/group4/Interfaces/Shotgun.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interfaces/Weapon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interfaces/Weapon.java" />
     <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Ammo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37">
@@ -707,13 +625,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Stack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Stack.java" />
     <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Character.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -732,13 +644,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/TheMaze/com/group4/Objects/Maze.class" />
     <entry file="file://$PROJECT_DIR$/out/production/TheMaze/com/group4/Main.class" />
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/trapBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/trapBuilder.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_CS4227-SAMPLE-2016_2017-Sales.zip/CS4227-SAMPLE-2016_2017-Sales/code/src/test/java/inventory/InventoryTest.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_CS4227-SAMPLE-2016_2017-Sales.zip/CS4227-SAMPLE-2016_2017-Sales/code/src/main/java/hr/Person.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_CS4227-SAMPLE-2016_2017-Sales.zip/CS4227-SAMPLE-2016_2017-Sales/code/src/main/java/inventory/components/Component.java" />
@@ -751,27 +657,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/CharacterPrototype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/Loader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/ICommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="14" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/CharacterPrototype.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/Loader.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/ICommand.java" />
     <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -779,21 +667,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/IGameStateManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/IGameStateManager.java" />
     <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Maze.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -808,20 +683,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/GameState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/MazeMoveCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/MazeMoveCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/com/group4/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -832,92 +694,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/Combiner.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/Combiner.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/Expression.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/ItemExpression.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/MinusExpression.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/MultiplyExpression.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/PlusExpression.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/InputReceiver.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/UMazeBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/Expression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/ItemExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/MinusExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/MultiplyExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/PlusExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/InputReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="494">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        <state relative-caret-position="60">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/Interceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="77" column="59" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/AttackSequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="93" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1632#1633#0" expanded="true" />
-            <element signature="e#1664#1665#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/UMazeBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/ConcreteFrameWork.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state relative-caret-position="255">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/ConcreteInterecptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/Dispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
           <folding>
-            <element signature="e#190#191#0" expanded="true" />
-            <element signature="e#233#234#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="115" column="55" lean-forward="true" selection-start-line="115" selection-start-column="55" selection-end-line="115" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
         </state>
       </provider>
     </entry>

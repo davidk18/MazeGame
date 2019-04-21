@@ -10,7 +10,7 @@ import com.group4.Interpreter.Combiner;
 // fu git
 public class Game {
     LocalGameStateManager gameStateManager = new LocalGameStateManager();
-    CharacterPrototype character = new CharacterPrototype("johnathon", false, true, 100, 10, null);
+    CharacterPrototype character; //= new CharacterPrototype("johnathon", false, true, 100, 10, null);
     GameState game = new GameState();
     boolean exit;
     boolean mazeCreated;
