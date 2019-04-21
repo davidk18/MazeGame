@@ -2,7 +2,7 @@ package com.group4.Interpreter;
 import java.util.Stack;
 
 public class Combiner {
-
+// fu git
     public Combiner() {
         String input = "ammo ammo +";
         Stack<Expression> stack = new Stack<>();

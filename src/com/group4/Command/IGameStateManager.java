@@ -5,6 +5,5 @@ public interface IGameStateManager {
     void displaySaves();
     GameState load(int saveId);
     GameState save(GameState state);
-    GameState newGame(int saveId);
 
 }

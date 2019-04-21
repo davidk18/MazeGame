@@ -56,8 +56,4 @@ public class LocalGameStateManager implements IGameStateManager {
 
     }
 
-    @Override
-    public GameState newGame(int saveId) {
-        return gameStates.get(saveId);
-    }
 }

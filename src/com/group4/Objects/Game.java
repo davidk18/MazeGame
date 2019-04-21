@@ -5,7 +5,7 @@ import com.group4.Command.LocalGameStateManager;
 import com.group4.Command.MazeMoveCommand;
 import com.group4.Interfaces.MazeBuilder;
 import com.group4.Interpreter.Combiner;
-
+// fu git
 public class Game {
     LocalGameStateManager gameStateManager = new LocalGameStateManager();
     CharacterPrototype character = new CharacterPrototype("johnathon", false, true, 100, 10, null);
