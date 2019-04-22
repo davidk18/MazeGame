@@ -1,25 +1,28 @@
 package com.group4.Objects;
 
+import com.group4.Builder.trapBuilder;
 import com.group4.Command.GameState;
 import com.group4.Command.LocalGameStateManager;
 import com.group4.Command.MazeMoveCommand;
 import com.group4.Interfaces.MazeBuilder;
 import com.group4.Interpreter.Combiner;
+import com.group4.Prototype.CharacterPrototype;
+
 // fu git
 public class Game {
     LocalGameStateManager gameStateManager = new LocalGameStateManager();
-    CharacterPrototype character = new CharacterPrototype("johnathon", false, true, 100, 10, null);
+    CharacterPrototype character; //= new CharacterPrototype("johnathon", false, true, 100, 10, null);
     GameState game = new GameState();
     boolean exit;
     boolean mazeCreated;
 
-    public Game(){
+    public Game() throws CloneNotSupportedException {
         exit = false;
         mazeCreated = false;
         begin();
     }
 
-    private void begin() {
+    private void begin() throws CloneNotSupportedException {
         game.setCharacter(character);
         while (!mazeCreated && !exit) {
             System.out.println();
@@ -29,23 +32,30 @@ public class Game {
             System.out.println("H: H-shaped maze");
             System.out.println("exit: Quit game");
             String input = InputReceiver.getInput().toLowerCase();
+            MazeBuilder builder;
             switch (input) {
                 case "u":
-                    MazeBuilder builder;
                     builder = new UMazeBuilder();
-                    MazeCreator mazeCreator = new MazeCreator(builder);
-                    mazeCreator.constructMaze();
-                    game.setMaze(mazeCreator.getMaze());
-                    character = new CharacterPrototype("johnathon", false, true, 100, 10, null);
-                    game.setCharacter(character);
-                    mazeCreated = true;
+                    GameSetup(builder);
                     break;
-                default:
+                case "l":
+                    builder = new LMazeBuilder();
+                    GameSetup(builder);
+                    break;
+                case "h":
+                    builder = new HMazeBuilder();
+                    GameSetup(builder);
+                    break;
+                case "exit":
                     exit = true;
+                default:
+                    System.out.println("Invalid input! Please try again...");
                     break;
             }
-            game.getCharacter().setCurrentRoom(game.getGameMaze().getRooms().get(0));
 
+        }
+        if(!exit) {
+            game.getCharacter().setCurrentRoom(game.getGameMaze().getRooms().get(0));
         }
 
         while(!exit) {
@@ -74,6 +84,9 @@ public class Game {
                     game.addAction(new MazeMoveCommand(game.getGameMaze(), game.getCharacter()));
                     game.executeLatestCommand();
                     break;
+                case "attack":
+                    game.attack();
+                    break;
                 case "undo":
                     game.undoLatestCommand();
                     break;
@@ -98,6 +111,18 @@ public class Game {
                     break;
             }
         }
+    }
+
+    private void GameSetup(MazeBuilder builder) throws CloneNotSupportedException {
+        MazeCreator mazeCreator = new MazeCreator(builder);
+        mazeCreator.constructMaze();
+        game.setMaze(mazeCreator.getMaze());
+        character = new CharacterPrototype("johnathon", false, true, 100, 10, null);
+        game.setCharacter(character);
+        mazeCreated = true;
+        int size = game.getGameMaze().getRooms().size();
+        generateTrap(size);
+        generateEnemies(size, character);
     }
 
     private void loadGame(){

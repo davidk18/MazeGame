@@ -1,7 +1,7 @@
 package com.group4.Interceptor;
 
 import java.util.ArrayList;
-import com.group4.Objects.CharacterPrototype;
+import com.group4.Prototype.CharacterPrototype;
 
 public class Dispatcher implements Interceptor{
 
@@ -13,19 +13,21 @@ public class Dispatcher implements Interceptor{
 		
 	}
 	
-	public void preRequest(CharacterPrototype mainCharacter) {
+	public void preRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) {
 		Interceptor myInterceptor = Interceptors.get(Interceptors.size()-1);
-		System.out.println(mainCharacter.getDescription()+" Attacked");
-		myInterceptor.preRequest(mainCharacter);
+		System.out.println("You have attacked the " + enemy.getDescription());
+		enemy.setHealth(enemy.getHealth() - mainCharacter.getDamage());
+		myInterceptor.preRequest(mainCharacter, enemy);
 		
 		
 	}
 
-	public void postRequest(CharacterPrototype mainCharacter) {
+	public void postRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) {
 		Interceptor myInterceptor = Interceptors.get(Interceptors.size()-1);
+		mainCharacter.setHealth(mainCharacter.getHealth() - enemy.getDamage());
 		System.out.println(mainCharacter.getDescription()+" Finished attacking");
-		mainCharacter.setHealth(25);// i cannot set this as i cannot access the products health
-		myInterceptor.postRequest(mainCharacter);
+
+		myInterceptor.postRequest(mainCharacter, enemy);
 	}
 
 	public void registerDispatcher(Interceptor interceptor) {

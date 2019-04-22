@@ -1,6 +1,8 @@
 package com.group4.Objects;
 
+import com.group4.Builder.trapBuilder;
 import com.group4.Interfaces.Item;
+import com.group4.Prototype.CharacterPrototype;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,6 +77,12 @@ public class Room {
     }
     public CharacterPrototype getEnemy(){
         return this.enemy;
+    }
+
+    public CharacterPrototype removeEnemy()
+    {
+        this.enemy = null;
+        return null;
     }
 
     public static class Builder {

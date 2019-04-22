@@ -1,8 +1,7 @@
 package com.group4.Command;
 
-import com.group4.Objects.CharacterPrototype;
+import com.group4.Prototype.CharacterPrototype;
 import com.group4.Objects.Direction;
-import com.group4.Objects.Door;
 import com.group4.Objects.Maze;
 
 public class MazeMoveCommand implements ICommand{
@@ -50,6 +49,8 @@ public class MazeMoveCommand implements ICommand{
 
         //code for enemies
         if(original.getCurrentRoom().getEnemy() != null) {
+            System.out.println("enemy health checker: " + original.getCurrentRoom().getEnemy().getHealth());
+
             if (original.getCurrentRoom().getEnemy().getDescription() == "zombie") {
                 System.out.println("Theres an emeny in this room ");
                 System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + "\n Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + "\n Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
@@ -58,7 +59,7 @@ public class MazeMoveCommand implements ICommand{
                 System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + "\n Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + "\n Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
             } else if (original.getCurrentRoom().getEnemy().getDescription() == "Ninja") {
                 System.out.println("Theres an emeny in this room ");
-                System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + "\n Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + "\n Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
+                System.out.println("Enemy name: " + original.getCurrentRoom().getEnemy().getDescription() + "\n Enemy damage: " + original.getCurrentRoom().getEnemy().getDamage() + "\ngo Enemy health: " +   original.getCurrentRoom().getEnemy().getHealth());
             } else {
                 System.out.println("No enemies present in this room ");
             }
@@ -90,6 +91,9 @@ public class MazeMoveCommand implements ICommand{
                 maze.move(original);
                 break;
         }
+    }
+    public void attack(){
+
     }
 
     public void setDirection(){

@@ -1,19 +1,18 @@
 package com.group4.Interceptor;
 
-import com.group4.Objects.CharacterPrototype;
+import com.group4.Prototype.CharacterPrototype;
 
 public class ConcreteFrameWork {
 
-	public static void attack(CharacterPrototype mainCharacter) { // should be the attack has to be in the main file as this ill start th interceptor
-		
+	public static void attack(CharacterPrototype mainCharacter, CharacterPrototype enemy) { //this will start the interceptor
 		Dispatcher myDispatcher = Dispatcher.getInstanceOfDispatcher();  // create dispatcher singleton
 
 		AttackSequence userAttack = new AttackSequence(); //this will be the attack sequence
 
 
-		userAttack.checkHealthBefore(mainCharacter, myDispatcher); //context needs to be the main character
+		userAttack.checkHealthBefore(mainCharacter, enemy, myDispatcher);
 
-		userAttack.checkHealthAfter(mainCharacter, myDispatcher);
+		userAttack.checkHealthAfter(mainCharacter, enemy, myDispatcher);
 		
 	}
 
