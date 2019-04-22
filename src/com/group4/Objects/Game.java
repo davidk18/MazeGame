@@ -1,5 +1,6 @@
 package com.group4.Objects;
 
+import com.group4.Builder.trapBuilder;
 import com.group4.Command.GameState;
 import com.group4.Command.LocalGameStateManager;
 import com.group4.Command.MazeMoveCommand;

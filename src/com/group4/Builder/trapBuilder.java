@@ -1,4 +1,4 @@
-package com.group4.Objects;
+package com.group4.Builder;
 
 public class trapBuilder {
 
