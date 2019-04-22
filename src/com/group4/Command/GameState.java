@@ -1,11 +1,9 @@
 package com.group4.Command;
 
 import com.group4.Interceptor.ConcreteFrameWork;
-import com.group4.Objects.CharacterPrototype;
-import com.group4.Objects.Direction;
+import com.group4.Prototype.CharacterPrototype;
 import com.group4.Objects.Maze;
 
-import javax.swing.*;
 import java.util.ArrayList;
 
 public class GameState {

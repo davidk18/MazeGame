@@ -1,4 +1,7 @@
-package com.group4.Objects;
+package com.group4.Prototype;
+
+import com.group4.Objects.Direction;
+import com.group4.Objects.Room;
 
 import java.util.ArrayList;
 

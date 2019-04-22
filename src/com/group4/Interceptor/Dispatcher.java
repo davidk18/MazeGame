@@ -1,8 +1,7 @@
 package com.group4.Interceptor;
 
 import java.util.ArrayList;
-import com.group4.Objects.CharacterPrototype;
-import com.group4.Objects.Room;
+import com.group4.Prototype.CharacterPrototype;
 
 public class Dispatcher implements Interceptor{
 
