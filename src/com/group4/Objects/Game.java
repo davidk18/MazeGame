@@ -32,30 +32,26 @@ public class Game {
             System.out.println("H: H-shaped maze");
             System.out.println("exit: Quit game");
             String input = InputReceiver.getInput().toLowerCase();
-            MazeBuilder builder;
             switch (input) {
                 case "u":
+                    MazeBuilder builder;
                     builder = new UMazeBuilder();
-                    GameSetup(builder);
+                    MazeCreator mazeCreator = new MazeCreator(builder);
+                    mazeCreator.constructMaze();
+                    game.setMaze(mazeCreator.getMaze());
+                    character = new CharacterPrototype("johnathon", false, true, 100, 10, null);
+                    game.setCharacter(character);
+                    mazeCreated = true;
+                    int size = game.getGameMaze().getRooms().size();
+                    generateTrap(size);
+                    generateEnemies(size, character);
                     break;
-                case "l":
-                    builder = new LMazeBuilder();
-                    GameSetup(builder);
-                    break;
-                case "h":
-                    builder = new HMazeBuilder();
-                    GameSetup(builder);
-                    break;
-                case "exit":
-                    exit = true;
                 default:
-                    System.out.println("Invalid input! Please try again...");
+                    exit = true;
                     break;
             }
-
-        }
-        if(!exit) {
             game.getCharacter().setCurrentRoom(game.getGameMaze().getRooms().get(0));
+
         }
 
         while(!exit) {
@@ -111,18 +107,6 @@ public class Game {
                     break;
             }
         }
-    }
-
-    private void GameSetup(MazeBuilder builder) throws CloneNotSupportedException {
-        MazeCreator mazeCreator = new MazeCreator(builder);
-        mazeCreator.constructMaze();
-        game.setMaze(mazeCreator.getMaze());
-        character = new CharacterPrototype("johnathon", false, true, 100, 10, null);
-        game.setCharacter(character);
-        mazeCreated = true;
-        int size = game.getGameMaze().getRooms().size();
-        generateTrap(size);
-        generateEnemies(size, character);
     }
 
     private void loadGame(){
