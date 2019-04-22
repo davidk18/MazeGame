@@ -1,7 +1,8 @@
 package com.group4.Command;
 
-import com.group4.Prototype.CharacterPrototype;
+import com.group4.Objects.CharacterPrototype;
 import com.group4.Objects.Direction;
+import com.group4.Objects.Door;
 import com.group4.Objects.Maze;
 
 public class MazeMoveCommand implements ICommand{

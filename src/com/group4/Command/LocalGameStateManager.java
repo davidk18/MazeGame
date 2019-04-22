@@ -1,6 +1,13 @@
 package com.group4.Command;
 
+import com.group4.Interfaces.MazeBuilder;
+import com.group4.Objects.CharacterPrototype;
+import com.group4.Objects.Direction;
+import com.group4.Objects.MazeCreator;
+import com.group4.Objects.UMazeBuilder;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class LocalGameStateManager implements IGameStateManager {
 

@@ -1,8 +1,6 @@
 package com.group4.Objects;
 
-import com.group4.Builder.trapBuilder;
 import com.group4.Interfaces.Item;
-import com.group4.Prototype.CharacterPrototype;
 
 import java.util.ArrayList;
 import java.util.List;

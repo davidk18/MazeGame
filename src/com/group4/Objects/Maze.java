@@ -1,7 +1,6 @@
 package com.group4.Objects;
 
 import com.group4.Interfaces.IMaze;
-import com.group4.Prototype.CharacterPrototype;
 
 import java.util.ArrayList;
 import java.util.List;
