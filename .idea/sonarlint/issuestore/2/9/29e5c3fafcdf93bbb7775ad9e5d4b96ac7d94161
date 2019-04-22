@@ -1,0 +1,13 @@
+
+Ysquid:S1126ì"AReplace this if-then-else statement by a single return statement.(æµù∑
+Qsquid:UnusedPrivateMethodí"+Remove this unused private "isDoor" method.(ìÌõã
+6squid:S21313"Use "Integer.toString" instead.(§¶Ï—
+ïsquid:S11583"~Call the static method Integer.toString(...) instead of instantiating a temporary object to perform this to string conversion.(§¶Ï—
+csquid:CommentedOutCodeLineÉ"<This block of commented-out lines of code should be removed.(÷¨Ï˝
+gsquid:CommentedOutCodeLine~"<This block of commented-out lines of code should be removed.(¢≈‚Ñ˛ˇˇˇˇ
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ö√£ˇ¯ˇˇˇˇ
+bsquid:CommentedOutCodeLinec"<This block of commented-out lines of code should be removed.(¡çâë
+gsquid:CommentedOutCodeLineq"<This block of commented-out lines of code should be removed.(“â…¶¯ˇˇˇˇ
+gsquid:CommentedOutCodeLiney"<This block of commented-out lines of code should be removed.(óÙ◊™¯ˇˇˇˇ
+gsquid:CommentedOutCodeLinet"<This block of commented-out lines of code should be removed.(Èÿª⁄˚ˇˇˇˇ
+8squid:S21293"!Remove this "Integer" constructor(§¶Ï—

@@ -1,0 +1,21 @@
+
+Fsquid:S2140¹")Use "java.util.Random.nextInt()" instead.(¿Çâžÿÿÿÿÿ
+hsquid:CommentedOutCodeLine¬"<This block of commented-out lines of code should be removed.(§€‡¤øÿÿÿÿ
+bsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(’îµà
+Fsquid:S2140")Use "java.util.Random.nextInt()" instead.(öˆïìÿÿÿÿÿ
+hsquid:CommentedOutCodeLineÀ"<This block of commented-out lines of code should be removed.(çª“Ñúÿÿÿÿ
+i
+squid:S1281"LEnd this switch case with an unconditional break, return or throw statement.(þŽû·8¥¯ë«¤-
+hsquid:CommentedOutCodeLine§"<This block of commented-out lines of code should be removed.(§€‡¤øÿÿÿÿ
+hsquid:CommentedOutCodeLine—"<This block of commented-out lines of code should be removed.(þÌ‰·ùÿÿÿÿ
+Asquid:S2140˜")Use "java.util.Random.nextInt()" instead.(Äƒý•
+hsquid:CommentedOutCodeLine¢"<This block of commented-out lines of code should be removed.(§€‡¤øÿÿÿÿ
+hsquid:CommentedOutCodeLine¶"<This block of commented-out lines of code should be removed.(þÌ‰·ùÿÿÿÿ
+Asquid:S2140·")Use "java.util.Random.nextInt()" instead.(Äƒý•
+hsquid:CommentedOutCodeLineÊ"<This block of commented-out lines of code should be removed.(ÏÝ—õþÿÿÿÿ
+Xsquid:S1854g"<Remove this useless assignment to local variable "combiner".(ŠžÕµþÿÿÿÿ
+/squid:S1700"Rename field "game"(ø™Ûµÿÿÿÿÿ
+Dsquid:S2440g"(Remove this instantiation of "Combiner".(ŠžÕµþÿÿÿÿ
+csquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(þŒÓÚ
+hsquid:CommentedOutCodeLineÅ"<This block of commented-out lines of code should be removed.(„¥åþüÿÿÿÿ
+rsquid:S00100t"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Øê€úÿÿÿÿ8¤ÚÉ«¤-

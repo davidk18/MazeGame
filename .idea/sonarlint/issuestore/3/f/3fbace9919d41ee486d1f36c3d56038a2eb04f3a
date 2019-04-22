@@ -1,0 +1,6 @@
+
+wsquid:UselessImportCheck"TRemove this unnecessary import: same package classes are always implicitly imported.(‚Ê«R
+ïsquid:S1158"~Call the static method Integer.toString(...) instead of instantiating a temporary object to perform this to string conversion.(¥áªí
+8squid:S2129"!Remove this "Integer" constructor(¥áªí
+6squid:S2131"Use "Integer.toString" instead.(¥áªí
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Àö÷Üˇˇˇˇˇ

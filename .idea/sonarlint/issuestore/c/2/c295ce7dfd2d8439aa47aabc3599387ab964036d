@@ -1,0 +1,8 @@
+
+jsquid:S2975j"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(´ÊŒå
+Psquid:S1172"9Remove this unused method parameter "characterPrototype".(ŽÕºà
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñæûøÿÿÿÿ
+_squid:S1182j"HUse super.clone() to create and seed the cloned instance to be returned.(´ÊŒå
+bsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ŽÃ‰Ï
+asquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(Ÿõ£p
+Œsquid:S1319c"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¤¸÷óøÿÿÿÿ

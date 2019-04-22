@@ -1,0 +1,19 @@
+
+]squid:UselessImportCheck
+"9Remove this unused import 'com.group4.Interfaces.Weapon'.(á¹»Ã
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ê‡îûÿÿÿÿ
+@squid:S1481(")Remove this unused "play" local variable.(ðÅô’
+bsquid:UselessImportCheck	">Remove this unused import 'com.group4.Interfaces.MazeBuilder'.(Ê“àÔ
+bsquid:UselessImportCheck"9Remove this unused import 'com.group4.Command.GameState'.(íŽèŒøÿÿÿÿ
+bsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ŸÆµÆ
+Osquid:S1854("8Remove this useless assignment to local variable "play".(ðÅô’
+bsquid:CommentedOutCodeLine+"<This block of commented-out lines of code should be removed.(»’õ¹
+hsquid:UselessImportCheck"?Remove this unused import 'com.group4.Command.MazeMoveCommand'.(ÓœßŽûÿÿÿÿ
+isquid:UselessImportCheck"ERemove this unused import 'com.group4.Command.LocalGameStateManager'.(ï§­™
+Wsquid:UselessImportCheck".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ
+?squid:S1068"(Remove this unused "maze" private field.(üªÒÙ
+lsquid:UselessImportCheck"CRemove this unused import 'com.group4.Factory.SimpleWeaponFactory'.(­Ã€©þÿÿÿÿ
+asquid:UselessImportCheck"8Remove this unused import 'com.group4.Interfaces.IMaze'.(ÛìÖ±ýÿÿÿÿ
+asquid:UselessImportCheck"=Remove this unused import 'com.group4.Factory.WeaponFactory'.(³ÄÑ†
+esquid:UselessImportCheck"<Remove this unused import 'com.group4.Interpreter.Combiner'.(ÞâÊÒýÿÿÿÿ
+nsquid:UselessImportCheck"ERemove this unused import 'com.group4.Interceptor.ConcreteFrameWork'.(Œ„Öøúÿÿÿÿ
