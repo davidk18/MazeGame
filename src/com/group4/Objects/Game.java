@@ -111,7 +111,7 @@ public class Game {
         catch (Exception e){
             System.out.println("Please enter an integer");
         }
-        if (selectedSave < max){
+        if (selectedSave <= max){
             game.getCharacter().setCurrentRoom(game.getGameMaze().getRooms().get(0));
             game = gameStateManager.load(selectedSave);
         }

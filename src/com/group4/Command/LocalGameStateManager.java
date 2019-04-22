@@ -37,7 +37,6 @@ public class LocalGameStateManager implements IGameStateManager {
         for (int i = 0; i < state.getActions().size(); i++){
             state.getActions().get(i).execute(state.getActions().get(i).getDirection());
         }
-        state.removeActions();
         return state;
 
     }

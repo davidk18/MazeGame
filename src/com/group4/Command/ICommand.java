@@ -10,8 +10,6 @@ public interface ICommand {
 
     public void undo();
 
-    public void setDirection();
-
     public Direction getDirection();
 
 }
