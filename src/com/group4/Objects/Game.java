@@ -3,10 +3,10 @@ package com.group4.Objects;
 import com.group4.Command.GameState;
 import com.group4.Command.LocalGameStateManager;
 import com.group4.Command.MazeMoveCommand;
-import com.group4.Interceptor.ConcreteFrameWork;
-import com.group4.Interceptor.Interceptor;
 import com.group4.Interfaces.MazeBuilder;
 import com.group4.Interpreter.Combiner;
+import com.group4.Prototype.CharacterPrototype;
+
 // fu git
 public class Game {
     LocalGameStateManager gameStateManager = new LocalGameStateManager();
