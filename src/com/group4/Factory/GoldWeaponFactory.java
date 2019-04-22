@@ -5,19 +5,24 @@ import com.group4.Interfaces.Weapon;
 import com.group4.Objects.GoldShotgun;
 import com.group4.Objects.GoldSword;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class GoldWeaponFactory implements WeaponFactory {
 
 
+    private Map<String, Weapon> weapons = new HashMap<String, Weapon>() {
+        {
+            put("Shotgun", new GoldShotgun());
+            put("Sword", new GoldSword());
+
+        }
+    };
+
     @Override
     public Weapon getWeapon(String itemName) {
-        switch(itemName) {
-            case "Shotgun":
-                return new GoldShotgun();
-            case "Sword":
-                return new GoldSword();
-            default:
-                return null;
-        }
+        return weapons.get(itemName);
+
     }
 
 }
