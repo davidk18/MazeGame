@@ -105,7 +105,8 @@ public class CharacterPrototype implements Cloneable {
 
     @Override
     public CharacterPrototype clone() throws CloneNotSupportedException{
-        return new CharacterPrototype(this);
+        //return new CharacterPrototype(this);
+        return (CharacterPrototype) super.clone();
     }
 
     public Inventory getInventory(){
