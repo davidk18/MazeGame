@@ -15,9 +15,9 @@ public class LMazeBuilder implements MazeBuilder {
     public void buildRooms() {
         Door d1 = new Door();
         Door d2 = new Door();
-        Room r1 = new Room.Builder(new Wall(), d1, new Wall(), new Wall()).build(); // room 1
+        Room r1 = new Room.Builder(new Wall(), d1, new Wall(), new Wall()).addItemsToRoom(ItemRandomiser.assignItems()).build();// room 1
         maze.addRoom(r1);
-        Room r2 = new Room.Builder(d1, d2, new Wall(), new Wall()).build(); // 2
+        Room r2 = new Room.Builder(d1, d2, new Wall(), new Wall()).addItemsToRoom(ItemRandomiser.assignItems()).build(); // 2
         maze.addRoom(r2);
         d1.setRooms(r1, r2);
 
@@ -25,35 +25,35 @@ public class LMazeBuilder implements MazeBuilder {
         d1 = d2;
         d2 = new Door();
         r1 = r2;
-        r2 = new Room.Builder(d1, d2, new Wall(), new Wall()).build(); // 3
+        r2 = new Room.Builder(d1, d2, new Wall(), new Wall()).addItemsToRoom(ItemRandomiser.assignItems()).build(); // 3
         maze.addRoom(r2);
         d1.setRooms(r1, r2);
 
         d1 = d2;
         d2 = new Door();
         r1 = r2;
-        r2 = new Room.Builder(d1, new Wall(), new Wall(), d2).build(); // 4
+        r2 = new Room.Builder(d1, new Wall(), new Wall(), d2).addItemsToRoom(ItemRandomiser.assignItems()).build(); // 4
         maze.addRoom(r2);
         d1.setRooms(r1, r2);
 
         d1 = d2;
         d2 = new Door();
         r1 = r2;
-        r2 = new Room.Builder(new Wall(), new Wall(), d1, d2).build(); // 5
+        r2 = new Room.Builder(new Wall(), new Wall(), d1, d2).addItemsToRoom(ItemRandomiser.assignItems()).build(); // 5
         maze.addRoom(r2);
         d1.setRooms(r1, r2);
 
         d1 = d2;
         d2 = new Door();
         r1 = r2;
-        r2 = new Room.Builder(new Wall(), new Wall(), d1,  d2).build(); // 6
+        r2 = new Room.Builder(new Wall(), new Wall(), d1,  d2).addItemsToRoom(ItemRandomiser.assignItems()).build(); // 6
         maze.addRoom(r2);
         d1.setRooms(r1, r2);
 
         d1 = d2;
 //        d2 = new Door();
         r1 = r2;
-        r2 = new Room.Builder(new Wall(), new Wall(), d1, new Wall()).build(); // 7
+        r2 = new Room.Builder(new Wall(), new Wall(), d1, new Wall()).addItemsToRoom(ItemRandomiser.assignItems()).build(); // 7
         maze.addRoom(r2);
         d1.setRooms(r1, r2);
 

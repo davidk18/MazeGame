@@ -3,6 +3,8 @@ package com.group4.Objects;
 import com.group4.Interfaces.Enchantment;
 import com.group4.Interfaces.Weapon;
 
+import java.util.Random;
+
 public class BronzeSword implements Weapon {
 
     private int damage;
@@ -10,11 +12,11 @@ public class BronzeSword implements Weapon {
 
     public BronzeSword(Enchantment enchantment) {
         this.enchantment = enchantment;
-        damage = 20;
+        damage = DamageRandomiser.getRandomDamage(20, 30);
     }
 
     public BronzeSword() {
-        damage = 20;
+        damage = DamageRandomiser.getRandomDamage(20, 30);
     }
 
     @Override
@@ -28,6 +30,7 @@ public class BronzeSword implements Weapon {
         System.out.println("enchantment applied");
         damage *= 2;
     }
+
 
     @Override
     public String getShortDescription() {

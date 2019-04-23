@@ -7,39 +7,17 @@ public class GoldShotgun implements Weapon {
 
     private boolean isGun;
     private int damage;
-    private Ammo ammo;
 
     public GoldShotgun()
     {
         isGun = true;
-        damage = 80;
-        ammo = new Ammo();
+        damage = DamageRandomiser.getRandomDamage(40, 60);
     }
     @Override
     public int getDamage() {
         return damage;
     }
 
-//    @Override
-    public Ammo getAmmo() {
-        return ammo;
-    }
-
-//    @Override // return true if shot fired, false if not (no ammo left)
-    public boolean fire() {
-        if(!ammo.getIsEmpty()) {
-            ammo.useAmmo();
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
-//    @Override
-    public void addAmmo(int a) {
-        ammo.addAmmo(a);
-    }
 
     @Override
     public Enchantment getEnchantment() {
@@ -53,7 +31,7 @@ public class GoldShotgun implements Weapon {
 
     @Override
     public String getLongDescription() {
-        return getShortDescription() + " with " + ammo.getAmmo() + " bullets left.";
+        return getShortDescription();
     }
 
     @Override

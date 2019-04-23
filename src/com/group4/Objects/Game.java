@@ -4,6 +4,7 @@ import com.group4.Builder.trapBuilder;
 import com.group4.Command.GameState;
 import com.group4.Command.LocalGameStateManager;
 import com.group4.Command.MazeMoveCommand;
+import com.group4.Interfaces.Item;
 import com.group4.Interfaces.MazeBuilder;
 import com.group4.Interpreter.Combiner;
 import com.group4.Prototype.CharacterPrototype;
@@ -62,6 +63,8 @@ public class Game {
             System.out.println();
             System.out.println(game.getCharacter().getDescription() + " is currently in " + game.getCharacter().getCurrentRoom());
             System.out.println(game.getGameMaze().getMap(game.getCharacter().getCurrentRoom()));
+            game.getCharacter().getCurrentRoom().displayItemsInRoom();
+            game.getCharacter().getInventory().display();
             String userInput = InputReceiver.getInput().toLowerCase();
             switch (userInput) {
                 case "go north":
@@ -99,6 +102,10 @@ public class Game {
                 case "load":
                     loadGame();
                     break;
+                case "take":
+                    takeItem();
+                //    game.getCharacter().getInventory().addItem(game.getCharacter().getCurrentRoom().getItem());
+                    break;
                 case "combine":
                     Combiner combiner = new Combiner();
                     break;
@@ -117,12 +124,31 @@ public class Game {
         MazeCreator mazeCreator = new MazeCreator(builder);
         mazeCreator.constructMaze();
         game.setMaze(mazeCreator.getMaze());
-        character = new CharacterPrototype("johnathon", false, true, 100, 10, null);
+        character = new CharacterPrototype("johnathon", new Inventory(), false, true, 100, 10, null);
         game.setCharacter(character);
         mazeCreated = true;
         int size = game.getGameMaze().getRooms().size();
         generateTrap(size);
         generateEnemies(size, character);
+    }
+
+    private void takeItem(){
+        System.out.println("Enter the number corresponding to the item you wish to take: ");
+        int max = game.getCharacter().getCurrentRoom().getItemCount();
+        String userInput = InputReceiver.getInput().toLowerCase();
+        int selectedItem = 0;
+        try{
+            selectedItem = Integer.parseInt(userInput);
+        }
+        catch (Exception e){
+            System.out.println("Please enter an integer corresponding to the item");
+        }
+
+        if (selectedItem <= max){
+            Item itemToTake = game.getCharacter().getCurrentRoom().takeItemFromRoom(selectedItem);
+            game.getCharacter().getInventory().addItem(itemToTake);
+        }
+
     }
 
     private void loadGame(){

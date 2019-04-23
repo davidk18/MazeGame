@@ -1,6 +1,7 @@
 package com.group4.Prototype;
 
 import com.group4.Objects.Direction;
+import com.group4.Objects.Inventory;
 import com.group4.Objects.Room;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 public class CharacterPrototype implements Cloneable {
 
     private String description;
-    // private Inventory inventory;
+    private Inventory inventory;
     private boolean isEnemy;
     private boolean isAlive;
     private int health;
@@ -20,17 +21,17 @@ public class CharacterPrototype implements Cloneable {
     public CharacterPrototype(CharacterPrototype characterPrototype)
     {
         description = "default";
-        //inventory = "null";
+        inventory = new Inventory();
         isEnemy = false;
         isAlive = true;
         health = 20;
         damage = 10;
     }
 
-    public CharacterPrototype(String description, /*Inventory inventory,*/boolean isEnemy, boolean isAlive, int health, int damage, Direction directionChosen)
+    public CharacterPrototype(String description, Inventory inventory, boolean isEnemy, boolean isAlive, int health, int damage, Direction directionChosen)
     {
         this.description = description;
-        //this.inventory = inventory;
+        this.inventory = inventory;
         this.isEnemy = isEnemy;
         this.isAlive = isAlive;
         this.health = health;
@@ -105,6 +106,10 @@ public class CharacterPrototype implements Cloneable {
     @Override
     public CharacterPrototype clone() throws CloneNotSupportedException{
         return new CharacterPrototype(this);
+    }
+
+    public Inventory getInventory(){
+        return inventory;
     }
 
 

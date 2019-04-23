@@ -6,5 +6,6 @@ public interface Item {
 	String getLongDescription();
 	boolean getIsGun();
 	boolean getIsAmmo();
+	int getDamage();
 
 }

@@ -14,7 +14,7 @@ public class Room {
     private final MapSite southSide;
     private final MapSite westSide;
     private final MapSite eastSide;
-    private Item item;
+    private ArrayList<Item> items;
     private List<CharacterPrototype> characters;
     private trapBuilder trap;
     private CharacterPrototype enemy;
@@ -22,13 +22,12 @@ public class Room {
     public Room(Builder builder) {
 //        _roomNr = _roomCnt++;
 //        System.out.println("creating Room #" + _roomNr);
-
+        this.items = builder.items;
         this.roomNr = builder.roomNr;
         this.northSide = builder.northSide;
         this.southSide = builder.southSide;
         this.westSide = builder.westSide;
         this.eastSide = builder.eastSide;
-        this.item = builder.item;
         this.characters = builder.characters;
     }
 
@@ -53,13 +52,29 @@ public class Room {
 
     public int getRoomNr() { return  roomNr; }
 
-    public Item getItem() {
-        return item;
-    }
-
     public List<CharacterPrototype> getCharacters() {
         return characters;
     }
+
+    public void displayItemsInRoom(){
+        System.out.println("Items in room: ");
+        for (int i = 0; i < items.size(); i++){
+            System.out.println(i+1 + ") " + items.get(i).getShortDescription() + " (Damage=" + items.get(i).getDamage() + ")");
+        }
+        System.out.println();
+    }
+
+    public int getItemCount(){
+        return items.size();
+    }
+
+    public Item takeItemFromRoom(int itemIndex){
+        Item item = items.get(itemIndex-1);
+        items.remove(itemIndex-1);
+        return item;
+
+    }
+
 
     public trapBuilder addTrap(trapBuilder trap1) {
         this.trap = trap1;
@@ -92,7 +107,7 @@ public class Room {
         private MapSite southSide;
         private MapSite westSide;
         private MapSite eastSide;
-        private Item item;
+        private ArrayList<Item> items;
         private List<CharacterPrototype> characters;
 
 //
@@ -133,8 +148,8 @@ public class Room {
 //            return this;
 //        }
 
-        public Builder setItem(Item item){
-            this.item = item;
+        public Builder addItemsToRoom(ArrayList<Item> items){
+            this.items = items;
             return this;
         }
 
@@ -150,11 +165,9 @@ public class Room {
             return false;
         }
 
-
         public Room build() {
             return new Room(this);
         }
-
 
 
 

@@ -10,11 +10,11 @@ public class GoldSword implements Weapon {
 
     public GoldSword(Enchantment enchantment) {
         this.enchantment = enchantment;
-        damage = 40;
+        damage = DamageRandomiser.getRandomDamage(50, 70);
     }
 
     public GoldSword() {
-        damage = 40;
+        damage = DamageRandomiser.getRandomDamage(50, 70);
     }
 
     @Override
