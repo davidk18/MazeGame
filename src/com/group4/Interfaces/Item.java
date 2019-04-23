@@ -7,5 +7,6 @@ public interface Item {
 	boolean getIsGun();
 	boolean getIsAmmo();
 	int getDamage();
+	void setDamage(int damage);
 
 }

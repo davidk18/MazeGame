@@ -17,6 +17,16 @@ public class Inventory {
         return true;
     }
 
+    public Item findItemByStringIndex(String s){
+        int index = -1;
+        try{
+            index = Integer.parseInt(s);
+        }
+        catch(Exception e){
+            System.out.println("Error combining items");
+        }
+        return items.get(index-1);
+    }
 
     public boolean removeItem(Item item) {
         items.remove(item);

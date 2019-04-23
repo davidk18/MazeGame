@@ -18,6 +18,10 @@ public class GoldShotgun implements Weapon {
         return damage;
     }
 
+    @Override
+    public void setDamage(int damage){
+        this.damage = damage;
+    }
 
     @Override
     public Enchantment getEnchantment() {

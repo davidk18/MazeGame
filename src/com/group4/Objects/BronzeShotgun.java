@@ -21,6 +21,11 @@ public class BronzeShotgun implements Weapon {
     }
 
     @Override
+    public void setDamage(int damage){
+        this.damage = damage;
+    }
+
+    @Override
     public Enchantment getEnchantment() {
         System.out.println("notimplementedexcep");
         return null;

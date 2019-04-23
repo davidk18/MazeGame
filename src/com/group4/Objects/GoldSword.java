@@ -22,6 +22,10 @@ public class GoldSword implements Weapon {
         return damage;
     }
 
+    @Override
+    public void setDamage(int damage){
+        this.damage = damage;
+    }
 
     public void enchantedDamage(){
         enchantment.apply();
