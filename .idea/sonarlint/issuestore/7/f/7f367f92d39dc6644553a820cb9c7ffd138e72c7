@@ -1,0 +1,15 @@
+
+Dsquid:S1125("(Remove the literal "true" boolean value.(æ¥€Şşÿÿÿÿ
+?squid:S1125"(Remove the literal "true" boolean value.(‘”›Î
+isquid:S11928"MDefine a constant instead of duplicating this literal "Enemy name: " 3 times.(ŞÃ´óûÿÿÿÿ
+nsquid:S11928"RDefine a constant instead of duplicating this literal "\n Enemy damage: " 3 times.(ŞÃ´óûÿÿÿÿ
+Dsquid:S1125#"(Remove the literal "true" boolean value.(ïë¥’şÿÿÿÿ
+zsquid:S11927"^Define a constant instead of duplicating this literal "Theres an emeny in this room " 3 times.(Ä‰œùÿÿÿÿ
+U"squid:SwitchLastCaseIsDefaultCheckL""Add a default case to this switch.(îåòùÿÿÿÿ
+hsquid:S1871$"LThis branch's code block is the same as the block for the branch on line 31.(ÒÌâ–øÿÿÿÿ
+hsquid:S1871)"LThis branch's code block is the same as the block for the branch on line 31.(ÒÌâ–øÿÿÿÿ
+hsquid:S18719"LThis branch's code block is the same as the block for the branch on line 54.(±ªŠùÿÿÿÿ
+ƒsquid:S4165d"gRemove this useless assignment; "direction" already holds the assigned value along all execution paths.(Œ¯ğúÿÿÿÿ
+˜squid:S1186_"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(€Áëû
+isquid:S1192!"MDefine a constant instead of duplicating this literal "new health: " 3 times.(¾ Æñùÿÿÿÿ
+asquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ìî¢

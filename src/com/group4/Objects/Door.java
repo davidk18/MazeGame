@@ -1,7 +1,9 @@
 package com.group4.Objects;
 
 
-public class Door extends MapSite {
+import com.group4.Interfaces.MapSite;
+
+public class Door implements MapSite {
 
     private static int doorCnt = 1;
     private int doorNr;
@@ -29,8 +31,9 @@ public class Door extends MapSite {
         room2 = r;
     }
 
+    @Override
     public String toString(){
-        return "Door #" + new Integer(doorNr).toString();
+        return "Door #" + doorNr;
     }
 
     public Room getRoom1() {

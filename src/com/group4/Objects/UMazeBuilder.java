@@ -37,7 +37,6 @@ public class UMazeBuilder implements MazeBuilder {
         d1.setRooms(r1, r2);
 
         d1 = d2;
-//        d2 = new Door();
         r1 = r2;
         r2 = new Room.Builder(new Wall(), d1, new Wall(), new Wall()).addItemsToRoom(ItemRandomiser.assignItems()).build();
         maze.addRoom(r2);
