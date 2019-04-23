@@ -8,14 +8,14 @@ import com.group4.Factory.WeaponFactory;
 import com.group4.Interfaces.IMaze;
 import com.group4.Interfaces.MazeBuilder;
 import com.group4.Interfaces.Weapon;
-import com.group4.Interpreter.Combiner;
+import com.group4.Interpreter.WeaponCombiner;
 import com.group4.Objects.*;
 import com.group4.Interceptor.ConcreteFrameWork;
 
 import java.util.Scanner;
 
 public class Main {
-//fuck you git
+
     private Maze maze;
 
     public static void main(String[] args) throws CloneNotSupportedException {
