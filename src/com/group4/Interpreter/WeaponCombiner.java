@@ -1,13 +1,15 @@
 package com.group4.Interpreter;
+import com.group4.Objects.InputReceiver;
+import com.group4.Prototype.CharacterPrototype;
+
 import java.util.Stack;
 
-public class Combiner {
+public class WeaponCombiner {
 // fu git
-    public Combiner() {
-        String input = "ammo ammo +";
+    public WeaponCombiner(CharacterPrototype original) {
         Stack<Expression> stack = new Stack<>();
-
-        String[] tokenList = input.split(" ");
+        System.out.println("Enter the weapon numbers you wish to combine");
+        String[] tokenList = InputReceiver.getInput().split(" ");
         for (String s : tokenList) {
             if (isOperator(s)) {
                 Expression rightExpression = stack.pop();
@@ -21,9 +23,10 @@ public class Combiner {
                 stack.push(resultExpression);
                 resultExpression.interpret();
             } else {
-                Expression i = new ItemExpression(s);
+/*
+                Expression i = new ItemExpression(s.toString());
                 stack.push(i);
-                i.interpret();
+                i.interpret();*/
             }
         }
         System.out.println(stack.pop().interpret());

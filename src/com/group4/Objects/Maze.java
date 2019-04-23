@@ -70,8 +70,4 @@ public class Maze implements IMaze {
             return false;
         }
     }
-
-
-
-
 }

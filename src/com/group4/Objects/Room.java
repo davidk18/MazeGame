@@ -69,11 +69,19 @@ public class Room {
         return items.size();
     }
 
-    public Item takeItemFromRoom(int itemIndex){
-        Item item = items.get(itemIndex-1);
-        items.remove(itemIndex-1);
-        return item;
+    public void addItemToRoom(Item item, int itemIndex){
+        items.add(itemIndex-1, item);
+    }
 
+    public Item takeItemFromRoom(int itemIndex){
+        try {
+            Item item = items.get(itemIndex - 1);
+            items.remove(itemIndex - 1);
+            return item;
+        }
+        catch (Exception e){
+            return null;
+        }
     }
 
 

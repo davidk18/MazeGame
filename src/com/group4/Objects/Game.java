@@ -4,9 +4,9 @@ import com.group4.Builder.trapBuilder;
 import com.group4.Command.GameState;
 import com.group4.Command.LocalGameStateManager;
 import com.group4.Command.MazeMoveCommand;
-import com.group4.Interfaces.Item;
+import com.group4.Command.TakeItemCommand;
 import com.group4.Interfaces.MazeBuilder;
-import com.group4.Interpreter.Combiner;
+import com.group4.Interpreter.WeaponCombiner;
 import com.group4.Prototype.CharacterPrototype;
 
 // fu git
@@ -107,7 +107,7 @@ public class Game {
                 //    game.getCharacter().getInventory().addItem(game.getCharacter().getCurrentRoom().getItem());
                     break;
                 case "combine":
-                    Combiner combiner = new Combiner();
+                    WeaponCombiner combiner = new WeaponCombiner(game.getCharacter());
                     break;
                 case "exit":
                     exit = true;
@@ -136,17 +136,15 @@ public class Game {
         System.out.println("Enter the number corresponding to the item you wish to take: ");
         int max = game.getCharacter().getCurrentRoom().getItemCount();
         String userInput = InputReceiver.getInput().toLowerCase();
-        int selectedItem = 0;
-        try{
-            selectedItem = Integer.parseInt(userInput);
-        }
-        catch (Exception e){
+        int selectedItemIndex = 0;
+        try {
+            selectedItemIndex = Integer.parseInt(userInput);
+        } catch (Exception e) {
             System.out.println("Please enter an integer corresponding to the item");
         }
-
-        if (selectedItem <= max){
-            Item itemToTake = game.getCharacter().getCurrentRoom().takeItemFromRoom(selectedItem);
-            game.getCharacter().getInventory().addItem(itemToTake);
+        if (selectedItemIndex <= max) {
+            game.addAction(new TakeItemCommand(game.getCharacter(), selectedItemIndex));
+            game.executeLatestCommand();
         }
 
     }
@@ -164,6 +162,10 @@ public class Game {
         }
         if (selectedSave <= max){
             game.getCharacter().setCurrentRoom(game.getGameMaze().getRooms().get(0));
+            int currentGameActionCount = game.getActions().size();
+            for (int i = currentGameActionCount-1; i >= 0; i--){
+                game.getActions().get(i).undo();
+            }
             game = gameStateManager.load(selectedSave);
         }
 

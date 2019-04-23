@@ -15,12 +15,46 @@ public class MazeMoveCommand implements ICommand{
         this.direction = original.getDirectionChosen();
         this.original = original;
     }
-
+    @Override
     public void execute(){
 
         maze.move(original);
-        //System.out.println("current room trap: " + original.getCurrentRoom().getTrap());
-        //code for traps
+        trap();
+
+    }
+
+    public void execute(Direction direction){
+        maze.move(original, direction);
+        trap();
+    }
+
+    @Override
+    public void undo(){
+        switch (direction.toString()) {
+            case "North":
+                original.setDirectionChosen(Direction.South);
+                maze.move(original);
+                break;
+            case "South":
+                original.setDirectionChosen(Direction.North);
+                maze.move(original);
+                break;
+            case "East":
+                original.setDirectionChosen(Direction.West);
+                maze.move(original);
+                break;
+            case "West":
+                original.setDirectionChosen(Direction.East);
+                maze.move(original);
+                break;
+        }
+    }
+
+    public Direction getDirection(){
+        return direction;
+    }
+
+    public void trap(){
         if(original.getCurrentRoom().getTrap() != null)
         {
             System.out.println("health before trap: " + original.getHealth());
@@ -65,41 +99,5 @@ public class MazeMoveCommand implements ICommand{
         }else {
             System.out.println("No enemies present in this room ");
         }
-    }
-
-    public void execute(Direction direction){
-        maze.move(original, direction);
-    }
-
-    public void undo(){
-        switch (direction.toString()) {
-            case "North":
-                original.setDirectionChosen(Direction.South);
-                maze.move(original);
-                break;
-            case "South":
-                original.setDirectionChosen(Direction.North);
-                maze.move(original);
-                break;
-            case "East":
-                original.setDirectionChosen(Direction.West);
-                maze.move(original);
-                break;
-            case "West":
-                original.setDirectionChosen(Direction.East);
-                maze.move(original);
-                break;
-        }
-    }
-    public void attack(){
-
-    }
-
-    public void setDirection(){
-        this.direction = direction;
-    }
-
-    public Direction getDirection(){
-        return direction;
     }
 }

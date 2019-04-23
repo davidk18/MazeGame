@@ -28,10 +28,21 @@ public class LocalGameStateManager implements IGameStateManager {
         ArrayList<ICommand> actions = new ArrayList<ICommand>(gameToLoad.getActions());
         GameState state = new GameState(gameStates.get(saveId-1).getGameMaze(), gameStates.get(saveId-1).getCharacter(), actions);
         for (int i = 0; i < state.getActions().size(); i++){
-            state.getActions().get(i).execute(state.getActions().get(i).getDirection());
+            if (state.getActions().get(i) instanceof MazeMoveCommand) {
+                state.getActions().get(i).execute(state.getActions().get(i).getDirection());
+            }
+            else {
+                state.getActions().get(i).execute();
+            }
+
+
         }
         return state;
 
+    }
+
+    public GameState getGameState(int saveId){
+        return gameStates.get(saveId-1);
     }
 
     public int getNumberOfSaves(){

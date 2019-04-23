@@ -24,5 +24,4 @@ public class GoldWeaponFactory implements WeaponFactory {
         return weapons.get(itemName);
 
     }
-
 }

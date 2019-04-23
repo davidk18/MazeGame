@@ -6,11 +6,10 @@ public interface ICommand {
 
     public void execute();
 
-    public void execute(Direction direction);
+    public void execute(Direction d);
 
     public void undo();
 
     public Direction getDirection();
 
-    public void attack();
 }

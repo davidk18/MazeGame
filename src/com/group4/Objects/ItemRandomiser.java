@@ -24,12 +24,20 @@ public class ItemRandomiser {
         ArrayList<Item> roomItems = new ArrayList<Item>();
         for (int i = 0; i < maxBronze; i++){
             randomIndex = random.nextInt(weaponList.length);
-            roomItems.add(bwf.getWeapon(weaponList[randomIndex]));
+            if (weaponList[randomIndex] == "Shotgun"){
+                roomItems.add(new BronzeShotgun());
+            }
+            else
+                roomItems.add(new BronzeShotgun());
         }
 
         for (int i = 0; i < maxGold; i++){
             randomIndex = random.nextInt(weaponList.length);
-            roomItems.add(gwf.getWeapon(weaponList[randomIndex]));
+            if (weaponList[randomIndex] == "Shotgun"){
+                roomItems.add(new GoldShotgun());
+            }
+            else
+                roomItems.add(new GoldSword());
         }
 
         return roomItems;

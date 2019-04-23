@@ -37,14 +37,14 @@ public class GameState {
         if (actions.size() > 0) {
             ICommand c = actions.get(actions.size() - 1);
             c.undo();
-            actions.remove(actions.size()-1);
+            actions.remove(actions.size() - 1);
 
         }
         else {
             System.out.println("No undos");
         }
     }
-    public void addAction(MazeMoveCommand action){
+    public void addAction(ICommand action){
         actions.add(action);
     }
 
