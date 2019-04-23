@@ -19,7 +19,7 @@ public class HMazeBuilder implements MazeBuilder {
         Door d4 = new Door();
         Room r1 = new Room.Builder(d4, d3, d1, d2).addItemsToRoom(ItemRandomiser.assignItems()).build(); // room 1
         maze.addRoom(r1);
-        Room r2 = new Room.Builder(new Wall(), new Wall(), new Wall(), d1).addItemsToRoom(ItemRandomiser.assignItems()).build();; // 2
+        Room r2 = new Room.Builder(new Wall(), new Wall(), new Wall(), d1).addItemsToRoom(ItemRandomiser.assignItems()).build(); // 2
         maze.addRoom(r2);
         d1.setRooms(r1, r2);
 
