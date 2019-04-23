@@ -48,7 +48,7 @@ public class Room {
     }
 
     public String toString() {
-        return "Room #" + new Integer(roomNr).toString();
+        return "Room #" + Integer.toString(roomNr);
     }
 
     public int getRoomNr() { return  roomNr; }
@@ -119,11 +119,11 @@ public class Room {
         private ArrayList<Item> items;
         private List<CharacterPrototype> characters;
 
-//
-//        public  Builder() {
-//            roomNr = roomCnt++;
-//            characters = new ArrayList<>();
-//        }
+
+        public  Builder() {
+            roomNr = roomCnt++;
+            characters = new ArrayList<>();
+        }
 
         public Builder(MapSite n, MapSite s, MapSite w, MapSite e) {
             roomNr = roomCnt++;
@@ -134,28 +134,25 @@ public class Room {
             eastSide = e;
         }
 
-//        public Builder setNorth(MapSite site) {
-//            if(isDoor(site)) {
-//
-//            }
-//            northSide = site;
-//            return this;
-//        }
-//
-//        public Builder setSouth(MapSite site) {
-//            southSide = site;
-//            return this;
-//        }
-//
-//        public Builder setWest(MapSite site) {
-//            westSide = site;
-//            return this;
-//        }
-//
-//        public Builder setEast(MapSite site) {
-//            eastSide = site;
-//            return this;
-//        }
+        public Builder setNorth(MapSite site) {
+            northSide = site;
+            return this;
+        }
+
+        public Builder setSouth(MapSite site) {
+            southSide = site;
+            return this;
+        }
+
+        public Builder setWest(MapSite site) {
+            westSide = site;
+            return this;
+        }
+
+        public Builder setEast(MapSite site) {
+            eastSide = site;
+            return this;
+        }
 
         public Builder addItemsToRoom(ArrayList<Item> items){
             this.items = items;
@@ -167,12 +164,6 @@ public class Room {
             return this;
         }
 
-        private boolean isDoor(MapSite site) {
-            if(site instanceof  Door) {
-                return true;
-            }
-            return false;
-        }
 
         public Room build() {
             return new Room(this);
