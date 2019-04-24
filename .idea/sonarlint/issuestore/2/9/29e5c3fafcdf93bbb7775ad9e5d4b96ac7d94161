@@ -1,13 +1,11 @@
 
-Ysquid:S1126ì"AReplace this if-then-else statement by a single return statement.(æµù∑
-Qsquid:UnusedPrivateMethodí"+Remove this unused private "isDoor" method.(ìÌõã
-6squid:S21313"Use "Integer.toString" instead.(§¶Ï—
-ïsquid:S11583"~Call the static method Integer.toString(...) instead of instantiating a temporary object to perform this to string conversion.(§¶Ï—
-csquid:CommentedOutCodeLineÉ"<This block of commented-out lines of code should be removed.(÷¨Ï˝
-gsquid:CommentedOutCodeLine~"<This block of commented-out lines of code should be removed.(¢≈‚Ñ˛ˇˇˇˇ
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ö√£ˇ¯ˇˇˇˇ
-bsquid:CommentedOutCodeLinec"<This block of commented-out lines of code should be removed.(¡çâë
-gsquid:CommentedOutCodeLineq"<This block of commented-out lines of code should be removed.(“â…¶¯ˇˇˇˇ
-gsquid:CommentedOutCodeLiney"<This block of commented-out lines of code should be removed.(óÙ◊™¯ˇˇˇˇ
-gsquid:CommentedOutCodeLinet"<This block of commented-out lines of code should be removed.(Èÿª⁄˚ˇˇˇˇ
-8squid:S21293"!Remove this "Integer" constructor(§¶Ï—
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ö√£ˇ¯ˇˇˇˇ
+]squid:UnusedPrivateMethodÄ"1Remove this unused private "Builder" constructor.(ˆßºx8™Òí¸§-
+èsquid:S1319ù"pThe type of the "items" object should be an interface such as "List" rather than the implementation "ArrayList".(ÿ¨∑¯8™Òí¸§-
+V
+squid:S106="9Replace this use of System.out or System.err by a logger.(™…≤õ8™Òí¸§-
+U
+squid:S106?"9Replace this use of System.out or System.err by a logger.(…”∏D8™Òí¸§-
+[
+squid:S106A"9Replace this use of System.out or System.err by a logger.(™”º·˛ˇˇˇˇ8™Òí¸§-
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÙÌŒà8™Òí¸§-
