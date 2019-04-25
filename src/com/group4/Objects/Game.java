@@ -51,6 +51,7 @@ public class Game {
                     break;
                 case "exit":
                     exit = true;
+                    break;
                 default:
                     System.out.println("Invalid input! Please try again...");
                     break;

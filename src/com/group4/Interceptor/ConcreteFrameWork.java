@@ -4,7 +4,7 @@ import com.group4.Prototype.CharacterPrototype;
 
 public class ConcreteFrameWork {
 
-	public static void attack(CharacterPrototype mainCharacter, CharacterPrototype enemy) { //this will start the interceptor
+	public static void attack(CharacterPrototype mainCharacter, CharacterPrototype enemy) { //this will start the Interceptor
 		Dispatcher myDispatcher = Dispatcher.getInstanceOfDispatcher();  // create dispatcher singleton
 
 		AttackSequence userAttack = new AttackSequence(); //this will be the attack sequence

@@ -125,7 +125,7 @@ public class Room {
             characters = new ArrayList<>();
         }
 
-        public Builder(MapSite n, MapSite s, MapSite w, MapSite e) {
+        Builder(MapSite n, MapSite s, MapSite w, MapSite e) {
             roomNr = roomCnt++;
             characters = new ArrayList<>();
             northSide = n;
