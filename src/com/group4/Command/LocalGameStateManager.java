@@ -13,16 +13,12 @@ public class LocalGameStateManager implements IGameStateManager {
         }
     }
 
-    public GameState save(GameState state){
+    public GameState save(GameState state) {
         gameStates.add(state);
         ArrayList<ICommand> actions = new ArrayList<ICommand>(state.getActions());
         return new GameState(state.getGameMaze(), state.getCharacter(), actions);
-
- //      GameState continuedGame = new GameState(state.getGameMaze(), state.getCharacter());
-   //     gameStates.add(continuedGame);
-
     }
-//Should a gamestate handle exeecuting all of the commands for that game??
+
     public GameState load(int saveId){
         GameState gameToLoad = gameStates.get(saveId-1);
         ArrayList<ICommand> actions = new ArrayList<ICommand>(gameToLoad.getActions());
@@ -34,10 +30,12 @@ public class LocalGameStateManager implements IGameStateManager {
             else {
                 state.getActions().get(i).execute();
             }
-
-
         }
         return state;
+
+    }
+
+    private void returnItems(int saveId){
 
     }
 

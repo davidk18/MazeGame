@@ -19,8 +19,4 @@ public class ItemExpression extends Expression {
         return itemAttributeValue;
     }
 
-    @Override
-    public String toString() {
-        return "number";
-    }
 }

@@ -23,14 +23,15 @@ public class TakeItemCommand implements ICommand {
         original.getInventory().addItem(itemTaken);
     }
 
-    public void execute(Direction d){
-        itemTaken = original.getCurrentRoom().takeItemFromRoom(itemIndex);
-        original.getInventory().addItem(itemTaken);
-    }
-
+    @Override
     public void undo(){
         original.getInventory().removeItem(itemTaken);
         original.getCurrentRoom().addItemToRoom(itemTaken, itemIndex);
+    }
+
+    public void execute(Direction d){
+        itemTaken = original.getCurrentRoom().takeItemFromRoom(itemIndex);
+        original.getInventory().addItem(itemTaken);
     }
 
     public Direction getDirection(){

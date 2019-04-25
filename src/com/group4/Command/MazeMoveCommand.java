@@ -23,11 +23,6 @@ public class MazeMoveCommand implements ICommand{
 
     }
 
-    public void execute(Direction direction){
-        maze.move(original, direction);
-        trap();
-    }
-
     @Override
     public void undo(){
         switch (direction.toString()) {
@@ -49,6 +44,12 @@ public class MazeMoveCommand implements ICommand{
                 break;
         }
     }
+
+    public void execute(Direction direction){
+        maze.move(original, direction);
+        trap();
+    }
+
 
     public Direction getDirection(){
         return direction;

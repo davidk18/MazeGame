@@ -7,7 +7,7 @@ import com.group4.Objects.Maze;
 import java.util.ArrayList;
 
 public class GameState {
-    private Maze gameMaze; //Maybe should refactor to have maze handled here
+    private Maze gameMaze;
     private ArrayList<ICommand> actions = new ArrayList<ICommand>();
     private CharacterPrototype character;
 
@@ -33,7 +33,6 @@ public class GameState {
     }
 
     public void undoLatestCommand(){
-        System.out.println("test");
         if (actions.size() > 0) {
             ICommand c = actions.get(actions.size() - 1);
             c.undo();
@@ -41,7 +40,7 @@ public class GameState {
 
         }
         else {
-            System.out.println("No undos");
+            System.out.println("Cannot undo");
         }
     }
     public void addAction(ICommand action){

@@ -6,8 +6,10 @@ import com.group4.Command.LocalGameStateManager;
 import com.group4.Command.MazeMoveCommand;
 import com.group4.Command.TakeItemCommand;
 import com.group4.Interfaces.MazeBuilder;
+import com.group4.Interpreter.CombinerTest;
 import com.group4.Interpreter.WeaponCombiner;
 import com.group4.Prototype.CharacterPrototype;
+import org.junit.Test;
 
 // fu git
 public class Game {
@@ -161,11 +163,11 @@ public class Game {
             System.out.println("Please enter an integer");
         }
         if (selectedSave <= max){
-            game.getCharacter().setCurrentRoom(game.getGameMaze().getRooms().get(0));
             int currentGameActionCount = game.getActions().size();
             for (int i = currentGameActionCount-1; i >= 0; i--){
                 game.getActions().get(i).undo();
             }
+            game.getCharacter().setCurrentRoom(game.getGameMaze().getRooms().get(0));
             game = gameStateManager.load(selectedSave);
         }
 
@@ -243,4 +245,5 @@ public class Game {
         }
 
     }
+
 }

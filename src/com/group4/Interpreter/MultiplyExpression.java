@@ -1,7 +1,7 @@
 package com.group4.Interpreter;
 
 public class MultiplyExpression extends Expression {
-// fu git
+
     private Expression leftExpression;
     private Expression rightExpression;
 
