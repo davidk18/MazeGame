@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="60fddbc4-2e7e-486d-aa5d-c140dfed24bf" name="Default Changelist" comment="">
+    <list default="true" id="60fddbc4-2e7e-486d-aa5d-c140dfed24bf" name="Default Changelist" comment="Room items and inventory system">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/GameState.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/LocalGameStateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/LocalGameStateManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/MazeMoveCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Command/MazeMoveCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/group4/Command/ICommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Command/ICommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/group4/Command/MazeMoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Command/MazeMoveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/group4/Objects/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Objects/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/group4/Objects/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Objects/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/group4/Objects/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/group4/Objects/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interpreter/Expression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interpreter/Expression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interpreter/ItemExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheMaze/com/group4/Interpreter/ItemExpression.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,113 +18,181 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/TheMaze$TheMaze.ic" NAME="TheMaze Coverage Results" MODIFIED="1555976999016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/TheMaze$TestRunner__1_.ic" NAME="TestRunner (1) Coverage Results" MODIFIED="1555994721931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.group4.Test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TheMaze$Runner.ic" NAME="Runner Coverage Results" MODIFIED="1555993948321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.group4.Interpreter.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TheMaze$CombinerTest.ic" NAME="CombinerTest Coverage Results" MODIFIED="1555993794696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.group4.Interpreter.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="134" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1558303952">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.40" value="2" />
+          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="BronzeShotgun" value="1" />
+          <entry key="Command" value="1" />
+          <entry key="InterpreterTest" value="2" />
+          <entry key="class" value="4" />
+          <entry key="java" value="365" />
+          <entry key="md" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="6" />
+          <entry key="JAVA" value="365" />
+          <entry key="Markdown" value="2" />
+          <entry key="UML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="InterpreterTest" value="18" />
+          <entry key="class" value="1" />
+          <entry key="dummy" value="10" />
+          <entry key="java" value="18283" />
+          <entry key="txt" value="404" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CLASS" value="19" />
+          <entry key="JAVA" value="18283" />
+          <entry key="PLAIN_TEXT" value="414" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Game.java">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state relative-caret-position="332">
+              <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Command/TakeItemCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Room.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
+              <folding>
+                <element signature="e#2076#2077#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Maze.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Inventory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#186#192#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Command/MazeMoveCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Prototype/CharacterPrototype.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
+              <folding>
+                <element signature="e#2036#2037#0" expanded="true" />
+                <element signature="e#2070#2071#0" expanded="true" />
+                <element signature="e#2122#2123#0" expanded="true" />
+                <element signature="e#2686#2687#0" expanded="true" />
+                <element signature="e#2718#2719#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Room.java">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="127" selection-start-line="127" selection-end-line="134" selection-end-column="9" />
-              <folding>
-                <element signature="e#1449#1450#0" expanded="true" />
-                <element signature="e#1505#1506#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/HMazeBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="70" column="15" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/UMazeBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="46" column="104" selection-start-line="46" selection-start-column="104" selection-end-line="46" selection-end-column="104" />
-              <folding>
-                <element signature="e#190#191#0" expanded="true" />
-                <element signature="e#233#234#0" expanded="true" />
-                <element signature="e#1589#1590#0" expanded="true" />
-                <element signature="e#1621#1622#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Interfaces/MazeBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Wall.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-              <folding>
-                <element signature="e#186#187#0" expanded="true" />
-                <element signature="e#220#221#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Factory/WeaponFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Factory/GoldWeaponFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Factory/SimpleWeaponFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/group4/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="390">
+              <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Command/GameState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="e#1634#1635#0" expanded="true" />
+                <element signature="e#1664#1665#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/DoubleDamage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -146,7 +212,6 @@
       <find>//</find>
       <find>gamestate</find>
       <find>setcurrent</find>
-      <find>room</find>
       <find>map</find>
       <find>input</find>
       <find>maze</find>
@@ -154,6 +219,16 @@
       <find>game game</find>
       <find>currentroom</find>
       <find>.get(0)</find>
+      <find>additem</find>
+      <find>getinvv</find>
+      <find>builder</find>
+      <find>getitem</find>
+      <find>room</find>
+      <find>add</find>
+      <find>takeitem</find>
+      <find>combin</find>
+      <find>combine</find>
+      <find>getcurrent</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,20 +237,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/group4/Factory/SimpleWeaponFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Interfaces/Item.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Interfaces/Weapon.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Interfaces/Sword.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Factory/WeaponFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/GoldShotgun.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/Direction.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/BronzeSword.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/GoldSword.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/RoomFluentBuilder.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/RoomFirst.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/Maze1.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Interfaces/Maze.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/UMaze.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/Door.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Objects/CreateMaze.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Objects/MazeCreator.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Objects/A.java" />
@@ -183,36 +245,49 @@
         <option value="$PROJECT_DIR$/src/com/group4/Factory/MazeFactory.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Interfaces/MazeBuilder.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Interfaces/IMaze.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/BronzeShotgun.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/MazeGame.java" />
         <option value="$USER_HOME$/Desktop/backup/Main.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Objects/CharacterPrototype.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Command/GameState.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Command/IGameStateManager.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/InputReceiver.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Prototype/CharacterPrototype.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/UMazeBuilder.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/LMazeBuilder.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/HMazeBuilder.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/DamageRandomiser.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Factory/BronzeWeaponFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/ItemRandomiser.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Factory/GoldWeaponFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/Room.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/Maze.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Interpreter/Combiner.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Interpreter/Expression.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/Inventory.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interfaces/Item.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/BronzeShotgun.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/BronzeSword.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/GoldShotgun.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/GoldSword.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interpreter/WeaponCombinerTest.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interpreter/InterpreterTest.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Test/TestJunit.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Test/InterpreterTest.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interpreter/Runner.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interpreter/TestRunner.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interpreter/CombinerTest.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Test/TestRunner.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interpreter/PlusExpression.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Interpreter/ItemExpression.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interpreter/Expression.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Interpreter/MinusExpression.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Interpreter/MultiplyExpression.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Interpreter/PlusExpression.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/InputReceiver.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/Game.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/Maze.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Command/MazeMoveCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/Inventory.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Command/TakeItemCommand.java" />
         <option value="$PROJECT_DIR$/src/com/group4/Command/ICommand.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/MapSite.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/Door.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Interfaces/MapSite.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/Wall.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Interfaces/Shotgun.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/MazeGame.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Factory/BronzeWeaponFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Factory/GoldWeaponFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/HMazeBuilder.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/UMazeBuilder.java" />
-        <option value="$PROJECT_DIR$/src/com/group4/Objects/Room.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Command/GameState.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Interpreter/WeaponCombiner.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java" />
+        <option value="$PROJECT_DIR$/src/com/group4/Objects/Game.java" />
       </list>
     </option>
   </component>
@@ -223,9 +298,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="842" />
-    <option name="y" value="5" />
-    <option name="width" value="957" />
+    <option name="x" value="870" />
+    <option name="y" value="4" />
+    <option name="width" value="1046" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
@@ -233,7 +308,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,42 +332,7 @@
               <item name="TheMaze" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="group4" type="462c0819:PsiDirectoryNode" />
-              <item name="Builder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheMaze" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheMaze" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="group4" type="462c0819:PsiDirectoryNode" />
               <item name="Command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheMaze" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheMaze" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="group4" type="462c0819:PsiDirectoryNode" />
-              <item name="Factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheMaze" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheMaze" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="group4" type="462c0819:PsiDirectoryNode" />
-              <item name="Interceptor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheMaze" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheMaze" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="group4" type="462c0819:PsiDirectoryNode" />
-              <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TheMaze" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TheMaze" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="group4" type="462c0819:PsiDirectoryNode" />
-              <item name="Interpreter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TheMaze" type="b2602c69:ProjectViewProjectNode" />
@@ -301,31 +341,45 @@
               <item name="group4" type="462c0819:PsiDirectoryNode" />
               <item name="Objects" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TheMaze" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TheMaze" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="group4" type="462c0819:PsiDirectoryNode" />
+              <item name="Prototype" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TheMaze" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555864223371" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556186982427" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.group4" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\David\IdeaProjects\TheMaze\src\com\group4" />
+      <recent name="C:\Users\Patryk\source\repos\TheMaze\src\com\group4\Objects" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.group4.Objects" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\David\IdeaProjects\TheMaze\src\com\group4" />
-      <recent name="C:\Users\Patryk\source\repos\TheMaze\src\com\group4\Objects" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.group4" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -340,7 +394,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TheMaze">
+    <configuration name="TestRunner (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.group4.Test.TestRunner" />
+      <module name="TheMaze" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.group4.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.group4.Interpreter.TestRunner" />
+      <module name="TheMaze" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.group4.Interpreter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TheMaze" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.group4.Main" />
       <module name="TheMaze" />
@@ -348,6 +428,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CombinerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TheMaze" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.group4.Interpreter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.group4.Interpreter" />
+      <option name="MAIN_CLASS_NAME" value="com.group4.Interpreter.CombinerTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.TheMaze" />
+      <item itemvalue="JUnit.CombinerTest" />
+      <item itemvalue="Application.TestRunner" />
+      <item itemvalue="Application.TestRunner (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestRunner (1)" />
+        <item itemvalue="Application.TestRunner" />
+        <item itemvalue="JUnit.CombinerTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -365,6 +472,7 @@
       <workItem from="1555804531792" duration="4308000" />
       <workItem from="1555854251205" duration="7065000" />
       <workItem from="1555964279202" duration="593000" />
+      <workItem from="1556184196445" duration="2784000" />
     </task>
     <task id="LOCAL-00001" summary="Command Implementation">
       <created>1555702597825</created>
@@ -422,11 +530,81 @@
       <option name="project" value="LOCAL" />
       <updated>1555806862457</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Merge branch 'master' of https://github.com/patrykl97/TheMaze">
+      <created>1555967061823</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1555967061823</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Room items and inventory system">
+      <created>1555978861798</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1555978861798</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Room items and inventory system">
+      <created>1555987168346</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1555987168346</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Interpreter functionality">
+      <created>1555990178859</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1555990178859</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Room items and inventory system">
+      <created>1555990212194</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1555990212194</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Room items and inventory system">
+      <created>1555990339185</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1555990339185</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Room items and inventory system">
+      <created>1556186875688</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1556186875689</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Room items and inventory system">
+      <created>1556186995844</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1556186995844</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="CombinerTest - 2019.04.23 at 05h 28m 29s.xml">
+      <configuration name="CombinerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CombinerTest - 2019.04.23 at 05h 29m 37s.xml">
+      <configuration name="CombinerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CombinerTest - 2019.04.23 at 05h 31m 17s.xml">
+      <configuration name="CombinerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CombinerTest - 2019.04.23 at 05h 31m 19s.xml">
+      <configuration name="CombinerTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55068000" />
+    <option name="totallyTimeSpent" value="87396000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,9 +617,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13646056" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19402985" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -449,18 +626,17 @@
       <window_info id="Image Layers" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32900432" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.46571428" weight="0.31060606" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46952382" weight="0.032467533" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.46571428" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46952382" weight="0.39696312" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49840087" weight="0.32792208" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4952381" weight="0.32853982" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49733475" weight="0.33116883" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50159913" side_tool="true" weight="0.32792208" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49307036" weight="0.32683983" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4990476" weight="0.32858709" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4952381" weight="0.3275488" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49809524" weight="0.3318584" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50476193" side_tool="true" weight="0.32853982" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49333334" weight="0.32632744" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="SonarLint" order="12" visible="true" weight="0.17207792" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -471,6 +647,7 @@
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Maven Projects" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.0" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
@@ -535,20 +712,9 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
@@ -557,7 +723,10 @@
     <MESSAGE value="Save/Load Game core features implemented, Interpreter implemented - Need to refactor main and user input retrieval method for full functionality" />
     <MESSAGE value="Main refactored, save/load debugged" />
     <MESSAGE value="Main refactored, save/load debugged, Interpreter implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main refactored, save/load debugged, Interpreter implemented" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/patrykl97/TheMaze" />
+    <MESSAGE value="Interpreter functionality" />
+    <MESSAGE value="Room items and inventory system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Room items and inventory system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -569,58 +738,58 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/group4/Command/MazeMoveCommand.java</url>
-          <line>101</line>
-          <properties />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/group4/Command/GameState.java</url>
-          <line>72</line>
+          <line>71</line>
           <properties />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/group4/Command/GameState.java</url>
-          <line>37</line>
+          <url>file://$PROJECT_DIR$/src/com/group4/Objects/Game.java</url>
+          <line>166</line>
           <properties />
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/group4/Command/GameState.java</url>
-          <line>39</line>
-          <properties />
-          <option name="timeStamp" value="47" />
+          <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/group4/Objects/Game.java</url>
-          <line>80</line>
+          <line>170</line>
           <properties />
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java</url>
-          <line>50</line>
-          <properties />
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java</url>
-          <line>46</line>
-          <properties />
-          <option name="timeStamp" value="62" />
+          <option name="timeStamp" value="93" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/group4/Objects/Game.java</url>
-          <line>115</line>
+          <line>167</line>
           <properties />
-          <option name="timeStamp" value="64" />
+          <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/group4/Objects/Maze.java</url>
-          <line>38</line>
+          <line>59</line>
           <properties />
-          <option name="timeStamp" value="65" />
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/group4/Objects/Maze.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/group4/Objects/Maze.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/group4/Objects/Maze.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/group4/Prototype/CharacterPrototype.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -630,59 +799,52 @@
         <watch expression="gameStateManager" />
         <watch expression="game.actions.get(0)" />
         <watch expression="gameStateManager" language="JAVA" />
+        <watch expression="gameStateManager.gameStates.get(0)" />
+        <watch expression="gameStateManager.gameStates.get(0).actions.get(6)" />
+        <watch expression="actions" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_CS4227-SAMPLE-2016_2017-Sales.zip/CS4227-SAMPLE-2016_2017-Sales/code/src/test/java/inventory/InventoryTest.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_CS4227-SAMPLE-2016_2017-Sales.zip/CS4227-SAMPLE-2016_2017-Sales/code/src/main/java/hr/Person.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_CS4227-SAMPLE-2016_2017-Sales.zip/CS4227-SAMPLE-2016_2017-Sales/code/src/main/java/inventory/components/Component.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_CS4227-SAMPLE-2016_2017-Sales.zip/CS4227-SAMPLE-2016_2017-Sales/code/src/main/java/inventory/components/Item.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_CS4227-SAMPLE-2016_2017-Sales.zip/CS4227-SAMPLE-2016_2017-Sales/code/src/main/java/inventory/components/InventoryItem.java" />
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/ItemExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Factory/BronzeWeaponFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        <state relative-caret-position="255">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/MinusExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Factory/GoldWeaponFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        <state relative-caret-position="374">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/MultiplyExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/PlusExpression.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Factory/WeaponFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/Combiner.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Maze.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Factory/SimpleWeaponFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/GodMode.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/LMazeBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="118">
+          <caret line="55" column="123" selection-start-line="55" selection-start-column="123" selection-end-line="55" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Door.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -693,131 +855,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/GoldSword.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/MazeCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="255">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/CharacterPrototype.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/GoldShotgun.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/UMazeBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Inventory.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/ICommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/ConcreteFrameWork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/ConcreteInterecptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interceptor/Dispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/Expression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Door.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding>
-            <element signature="e#588#589#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-126">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interfaces/MapSite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Wall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#220#221#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Item.old.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interfaces/IMaze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="204">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/group4/Interfaces/Weapon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interfaces/Sword.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interfaces/Shotgun.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/MazeGame.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Maze.old..java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/ItemRandomiser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918">
-          <folding>
-            <element signature="e#0#5467#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interfaces/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/MazeMoveCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/BronzeSword.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="131">
+          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/GoldShotgun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/GoldSword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/HMazeBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="60" column="123" selection-start-line="60" selection-start-column="123" selection-end-line="60" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/WeaponCombinerTest.java" />
+    <entry file="file://$PROJECT_DIR$/Test/InterpreterTest" />
+    <entry file="file://$PROJECT_DIR$/Test/InterpreterTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/InterpreterTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Testing.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Test/TestJunit.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Test/InterpreterTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/TestRunner.java" />
+    <entry file="uml://JAVA/com.group4.Objects.BronzeShotgun">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.group4.Objects.BronzeShotgun</OriginalElement>
+          <nodes>
+            <node x="28.5" y="0.0">com.group4.Interfaces.Item</node>
+            <node x="18.5" y="79.0">com.group4.Interfaces.Weapon</node>
+            <node x="0.0" y="158.0">com.group4.Objects.BronzeShotgun</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.group4.Objects.BronzeShotgun" target="com.group4.Interfaces.Weapon">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="com.group4.Interfaces.Weapon" target="com.group4.Interfaces.Item">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-453.0" y="-102.0" />
+          <SelectedNodes>
+            <node>com.group4.Objects.BronzeShotgun</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.group4.Command">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.group4.Command</OriginalElement>
+          <nodes>
+            <node x="12.5" y="153.0">com.group4.Command.IGameStateManager</node>
+            <node x="0.0" y="306.0">com.group4.Command.Loader</node>
+            <node x="225.0" y="153.0">com.group4.Command.GameState</node>
+            <node x="183.0" y="79.0">com.group4.Command.TakeItemCommand</node>
+            <node x="0.0" y="79.0">com.group4.Command.MazeMoveCommand</node>
+            <node x="116.75" y="0.0">com.group4.Command.ICommand</node>
+            <node x="0.0" y="232.0">com.group4.Command.LocalGameStateManager</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.group4.Command.LocalGameStateManager" target="com.group4.Command.IGameStateManager">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="com.group4.Command.TakeItemCommand" target="com.group4.Command.ICommand">
+              <point x="0.0" y="-14.5" />
+              <point x="260.0" y="54.0" />
+              <point x="197.75" y="54.0" />
+              <point x="27.0" y="14.5" />
+            </edge>
+            <edge source="com.group4.Command.MazeMoveCommand" target="com.group4.Command.ICommand">
+              <point x="0.0" y="-14.5" />
+              <point x="81.5" y="54.0" />
+              <point x="143.75" y="54.0" />
+              <point x="-27.0" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-349.0" y="-28.0" />
+          <SelectedNodes>
+            <node>com.group4.Command.LocalGameStateManager</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -828,117 +1014,192 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/IGameStateManager.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/BronzeShotgun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/ICommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/GameState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Factory/MazeFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/MinusExpression.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Factory/BronzeWeaponFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/MultiplyExpression.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="23" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/PlusExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/ItemExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/Expression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/CombinerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Factory/GoldWeaponFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Interpreter/WeaponCombiner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Factory/WeaponFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Factory/SimpleWeaponFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="400">
+          <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/group4/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="-93">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/IGameStateManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Test/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="45" lean-forward="true" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/DoubleDamage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/HMazeBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/LocalGameStateManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="70" column="15" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
+        <state relative-caret-position="332">
+          <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/MazeCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Inventory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Interfaces/MazeBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/UMazeBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="46" column="104" selection-start-line="46" selection-start-column="104" selection-end-line="46" selection-end-column="104" />
+        <state relative-caret-position="225">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
-            <element signature="e#190#191#0" expanded="true" />
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#1589#1590#0" expanded="true" />
-            <element signature="e#1621#1622#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#186#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/TakeItemCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="127" selection-start-line="127" selection-end-line="134" selection-end-column="9" />
+        <state relative-caret-position="102">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
           <folding>
-            <element signature="e#1449#1450#0" expanded="true" />
-            <element signature="e#1505#1506#0" expanded="true" />
+            <element signature="e#2076#2077#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#1634#1635#0" expanded="true" />
+            <element signature="e#1664#1665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Prototype/CharacterPrototype.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="e#2036#2037#0" expanded="true" />
+            <element signature="e#2070#2071#0" expanded="true" />
+            <element signature="e#2122#2123#0" expanded="true" />
+            <element signature="e#2686#2687#0" expanded="true" />
+            <element signature="e#2718#2719#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Command/MazeMoveCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/group4/Objects/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
