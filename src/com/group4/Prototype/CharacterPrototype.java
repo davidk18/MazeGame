@@ -5,6 +5,7 @@ import com.group4.Objects.Inventory;
 import com.group4.Objects.Room;
 
 import java.util.ArrayList;
+//creating clones reduces the need for repetitive code game.java
 
 public class CharacterPrototype implements Cloneable {
 

@@ -1,6 +1,6 @@
 package com.group4.Builder;
 
-public class trapBuilder {
+public class trapBuilder { //helps with construction of complex objects game.java
 
     private final String description;
     private final boolean hasSpikes;

@@ -1,6 +1,8 @@
 package com.group4.Objects;
 
-public class CharacterProduct {
+public class CharacterProduct { //character being created with builder, but immutable objects for correct builder implementation so could not be used
+    //used builder instead for creating traps
+    //character created instead with prototype see characterPrototype.java
 
     private final String description;
     // private final Inventory inventory;

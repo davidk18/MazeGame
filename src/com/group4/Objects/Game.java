@@ -131,8 +131,8 @@ public class Game {
         game.setCharacter(character);
         mazeCreated = true;
         int size = game.getGameMaze().getRooms().size();
-        generateTrap(size);
-        generateEnemies(size, character);
+        generateTrap(size); //calling trap method at start of game passing total num of rooms
+        generateEnemies(size, character); //calling method at start of game passing numOfRooms and mainCharacter
     }
 
     private void takeItem(){
@@ -179,7 +179,8 @@ public class Game {
     public void generateTrap(int size)
     {
         int sizeOfRooms = size;
-        //System.out.println("num of total rooms: " + sizeOfRooms);
+        //System.out.println("num of total rooms: " + sizeOfRooms); room.java
+
         int randomNum = (int) (Math.random() * sizeOfRooms-1);
         if(randomNum == 0) {
             System.out.println("Tread carefully there is a trap generated in this room");
@@ -209,6 +210,7 @@ public class Game {
 
     public void generateEnemies(int size, CharacterPrototype original) throws CloneNotSupportedException
     {
+        //creating enemies and adding them to rooms mazeMoveCommand.java
         int sizeOfRooms = size;
         //System.out.println("num of total rooms: " + sizeOfRooms);
         int randomNum = (int) (Math.random() * sizeOfRooms-1);
