@@ -13,31 +13,28 @@ public class Dispatcher implements Interceptor{
 		
 	}
 	
-	public void preRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) {
+	public void preRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) { //this is the logic for attacking the enemy and updating the health
 		Interceptor myInterceptor = Interceptors.get(Interceptors.size()-1);
 		System.out.println("You have attacked the " + enemy.getDescription());
-		enemy.setHealth(enemy.getHealth() - mainCharacter.getDamage());
-		myInterceptor.preRequest(mainCharacter, enemy);
+		enemy.setHealth(enemy.getHealth() - mainCharacter.getDamage()); //enemy context is updated
+		myInterceptor.preRequest(mainCharacter, enemy);//calls the prerequest for the interceptor
 		
 		
 	}
 
 	public void postRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) {
 		Interceptor myInterceptor = Interceptors.get(Interceptors.size()-1);
-		mainCharacter.setHealth(mainCharacter.getHealth() - enemy.getDamage());
+		mainCharacter.setHealth(mainCharacter.getHealth() - enemy.getDamage());//updating the context
 		System.out.println(mainCharacter.getDescription()+" Finished attacking");
-
-		myInterceptor.postRequest(mainCharacter, enemy);
+		myInterceptor.postRequest(mainCharacter, enemy); //after attack is finished i return the context to the interceptor to print the updates
 	}
 
 	public void registerDispatcher(Interceptor interceptor) {
 		Interceptors.add(interceptor);
-		//System.out.println("You have attacked.");
 	}
 	
 	public void removerDispatcher(Interceptor interceptor) {
 		Interceptors.remove(interceptor);
-		//System.out.println("Your attack is over.");
 	}
 	
 	

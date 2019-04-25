@@ -71,7 +71,7 @@ public class GameState {
         actions.clear();
     }
 
-    public void attack(){
+    public void attack(){ //Calls the concrete framework
         if(character.getCurrentRoom().getEnemy() != null) {
             ConcreteFrameWork.attack(character, character.getCurrentRoom().getEnemy());
         }

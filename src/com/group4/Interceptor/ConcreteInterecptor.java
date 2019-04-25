@@ -17,7 +17,7 @@ public class ConcreteInterecptor implements Interceptor{
 	
 	public void preRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) {
 		System.out.println(mainCharacter.getDescription()+"'s health before he attacked is: "+mainCharacter.getHealth());
-		HealthBefore.add(mainCharacter.getDescription()+"\t"+mainCharacter.getHealth());
+		HealthBefore.add(mainCharacter.getDescription()+"\t"+mainCharacter.getHealth());//adds the health before attack to the health before attack
 	}
 
 	public void postRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) {
@@ -30,7 +30,7 @@ public class ConcreteInterecptor implements Interceptor{
 		System.out.println("The " + enemy.getDescription()+" did " + enemy.getDamage() + " damage to you,");
 		if(mainCharacter.getHealth() <= 0){
 			System.out.print("You died, game over");// game should end here
-			System.exit(0);//one way to end not ideal
+			System.exit(0);//one way to end not the best
 		}
 		else System.out.println("Your health after attacking is: " + mainCharacter.getHealth());
 
