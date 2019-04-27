@@ -222,16 +222,19 @@ public class Game {
         clonedZombie.setDescription("zombie");
         clonedZombie.setEnemy(true);
         clonedZombie.setDamage(8);
+        clonedZombie.setHealth(20);
         //System.out.println("clonedZombie name: " + clonedZombie.getDescription() + "clonedZombie damage " + clonedZombie.getDamage() + " health: " +   clonedZombie.getHealth());
 
         CharacterPrototype clonedThief = clonedZombie.clone();
         clonedThief.setDescription("Thief");
         clonedThief.setDamage(12);
+        clonedThief.setHealth(20);
         // System.out.println("clonedThief name: " + clonedThief.getDescription() + "clonedThief damage " + clonedThief.getDamage() + " health: " +   clonedThief.getHealth());
 
         CharacterPrototype clonedNinja = clonedZombie.clone();
         clonedNinja.setDescription("Ninja");
         clonedNinja.setDamage(15);
+        clonedNinja.setHealth(20);
         //System.out.println("clonedNinja name: " + clonedNinja.getDescription() + "clonedNinja damage " + clonedNinja.getDamage() + " health: " +   clonedNinja.getHealth());
 
         if(enemySelection == 0)

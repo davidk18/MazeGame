@@ -1,7 +1,6 @@
 package com.group4.Interceptor;
 
 import java.util.ArrayList;
-import com.group4.Prototype.CharacterPrototype;
 
 public class ConcreteInterecptor implements Interceptor{
 
@@ -15,16 +14,16 @@ public class ConcreteInterecptor implements Interceptor{
 		
 	}
 	
-	public void preRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) {
+	public void preRequest(Context mainCharacter, Context enemy) {
 		System.out.println(mainCharacter.getDescription()+"'s health before he attacked is: "+mainCharacter.getHealth());
 		HealthBefore.add(mainCharacter.getDescription()+"\t"+mainCharacter.getHealth());//adds the health before attack to the health before attack
 	}
 
-	public void postRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) {
+	public void postRequest(Context mainCharacter, Context enemy) {
 		System.out.println("You did " + mainCharacter.getDamage() + " damage to the " + enemy.getDescription());
 		System.out.println("The " + enemy.getDescription()+"'s health after you attacked is: "+enemy.getHealth());
         if(enemy.getHealth() <= 0){
-            mainCharacter.getCurrentRoom().removeEnemy();
+        	enemy.setAlive(false);
             System.out.println("You killed the " + enemy.getDescription());
         }
 		System.out.println("The " + enemy.getDescription()+" did " + enemy.getDamage() + " damage to you,");

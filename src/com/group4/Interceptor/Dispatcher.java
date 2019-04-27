@@ -13,7 +13,7 @@ public class Dispatcher implements Interceptor{
 		
 	}
 	
-	public void preRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) { //this is the logic for attacking the enemy and updating the health
+	public void preRequest(Context mainCharacter, Context enemy) { //this is the logic for attacking the enemy and updating the health
 		Interceptor myInterceptor = Interceptors.get(Interceptors.size()-1);
 		System.out.println("You have attacked the " + enemy.getDescription());
 		enemy.setHealth(enemy.getHealth() - mainCharacter.getDamage()); //enemy context is updated
@@ -22,7 +22,7 @@ public class Dispatcher implements Interceptor{
 		
 	}
 
-	public void postRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy) {
+	public void postRequest(Context mainCharacter, Context enemy) {
 		Interceptor myInterceptor = Interceptors.get(Interceptors.size()-1);
 		mainCharacter.setHealth(mainCharacter.getHealth() - enemy.getDamage());//updating the context
 		System.out.println(mainCharacter.getDescription()+" Finished attacking");

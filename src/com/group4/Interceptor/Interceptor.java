@@ -4,8 +4,8 @@ import com.group4.Prototype.CharacterPrototype;
 
 public interface Interceptor {
 
-	void preRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy);
-	void postRequest(CharacterPrototype mainCharacter, CharacterPrototype enemy);
+	void preRequest(Context mainCharacter, Context enemy);
+	void postRequest(Context mainCharacter, Context enemy);
 	
 	
 }
