@@ -5,9 +5,6 @@ import java.util.ArrayList;
 public class ConcreteInterecptor implements Interceptor{
 
 	
-	ArrayList<String> HealthBefore = new ArrayList<String>();
-	ArrayList<String> HealthAfter = new ArrayList<String>();
-	
 	private static ConcreteInterecptor myInterceptorAction;
 	
 	private ConcreteInterecptor() {
@@ -16,7 +13,6 @@ public class ConcreteInterecptor implements Interceptor{
 	
 	public void preRequest(Context mainCharacter, Context enemy) {
 		System.out.println(mainCharacter.getDescription()+"'s health before he attacked is: "+mainCharacter.getHealth());
-		HealthBefore.add(mainCharacter.getDescription()+"\t"+mainCharacter.getHealth());//adds the health before attack to the health before attack
 	}
 
 	public void postRequest(Context mainCharacter, Context enemy) {
@@ -32,8 +28,6 @@ public class ConcreteInterecptor implements Interceptor{
 			System.exit(0);//one way to end not the best
 		}
 		else System.out.println("Your health after attacking is: " + mainCharacter.getHealth());
-
-		HealthAfter.add(mainCharacter.getDescription()+"\t" + mainCharacter.getHealth());
 	}
 	
 
